@@ -264,6 +264,7 @@ MonoBehaviour:
   playerRoom: {fileID: 378666303130500032, guid: afdc382d653128043b97c6bfaffe7852, type: 3}
   defaultRoom: {fileID: 7777476307801422254, guid: 377fa56baa708c045ab0ed6a3b4e6926, type: 3}
   creatureRoom: {fileID: 2280236548925380396, guid: 9916b7bebab76ae43a74329ca8cba925, type: 3}
+  npcRoom: {fileID: 2847524656706069892, guid: 73fafdb1bb8d36144a673b11529aae2e, type: 3}
   graphTest: {fileID: 826419577}
   itemParent: {fileID: 1607766029}
   cinemachineCamera: {fileID: 1792208467}
@@ -282,6 +283,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerSpawn: {x: 0, y: 0}
 --- !u!4 &355307592
 Transform:
   m_ObjectHideFlags: 0
@@ -24318,7 +24320,7 @@ MonoBehaviour:
   randomWalkParameters: {fileID: 11400000, guid: ed58e9b5cc90cfa4c8029a69a7f0f788, type: 2}
   corridorLength: 20
   corridorCount: 15
-  roomPercent: 0.7
+  roomPercent: 0.6
   showRoomGizmo: 0
   showCorridorsGizmo: 0
   OnDungeonFloorReady:

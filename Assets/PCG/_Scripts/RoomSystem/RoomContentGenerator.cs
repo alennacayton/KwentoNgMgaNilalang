@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class RoomContentGenerator : MonoBehaviour
 {
     [SerializeField]
-    private RoomGenerator playerRoom, defaultRoom, creatureRoom;
+    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom;
 
     List<GameObject> spawnedObjects = new List<GameObject>();
 
@@ -56,8 +56,6 @@ public class RoomContentGenerator : MonoBehaviour
 
 
 
-
-
         */
 
         foreach (GameObject item in spawnedObjects)
@@ -68,6 +66,7 @@ public class RoomContentGenerator : MonoBehaviour
 
         SelectPlayerSpawnPoint(dungeonData);
         SelectBossSpawnPoint(dungeonData);
+        SelectNPCSpawnPoint(dungeonData);
         SelectEnemySpawnPoints(dungeonData);
 
         foreach (GameObject item in spawnedObjects)
@@ -120,10 +119,6 @@ public class RoomContentGenerator : MonoBehaviour
     private void SelectBossSpawnPoint(DungeonData dungeonData)
     {
 
-    
-
-
-
 
         /*
 
@@ -168,17 +163,7 @@ public class RoomContentGenerator : MonoBehaviour
         dungeonData.roomsDictionary.Remove(highest);
 
 
-
-
-
-
         */
-
-
-
-
-
-
         
 
         // ================================= USING DIJKSTRA ALGO =================================================
@@ -192,13 +177,11 @@ public class RoomContentGenerator : MonoBehaviour
         Vector2Int bossRoomKey = new Vector2Int(0, 0);
         HashSet<Vector2Int> bossRoomValues = new HashSet<Vector2Int>();
 
-     
 
         foreach (var result in graphTest.getDijkstraResult().Reverse())
         {
-            // Debug.Log("Key = " + result.Key + " Value = " + result.Value);
 
-            if (!isCorridor(result.Key, dungeonData)) // IF ITS HIGHEST VALUE AND IS NOT A CORRIDOR SET IT TO HIGHEST
+            if (!isCorridor(result.Key, dungeonData)) // If not a corridor, set it to highest key
             {
                 Debug.Log("Highest Key : " + highestPoint);
                 highestPoint = result.Key;
@@ -208,17 +191,10 @@ public class RoomContentGenerator : MonoBehaviour
 
         }
 
-
-        // iterate through all rooms and coordinates
-        // locate which room has the highest point
-        // set room as boss room
-
         proceed:
         foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
         {
-            // Debug.Log("ROOM Key: " + roomData.Key);
-
-
+      
            foreach (var val in dungeonData.GetRoomFloorWithoutCorridors(roomData.Key))
            {
                 if (val.Equals(highestPoint))
@@ -233,10 +209,6 @@ public class RoomContentGenerator : MonoBehaviour
 
 
 
-
-
-
-
         Debug.Log("=========================================================   BOSS ROOM KEY " + bossRoomKey + " =========================================================");
 
         spawnedObjects.AddRange(
@@ -247,12 +219,12 @@ public class RoomContentGenerator : MonoBehaviour
          );
 
 
-        // remove room  from list
+        // remove room from list
         dungeonData.roomsDictionary.Remove(bossRoomKey);
         
     }
 
-
+    // Checks if key is a corridor
     private Boolean isCorridor(Vector2Int key, DungeonData dungeonData)
     {
 
@@ -261,8 +233,7 @@ public class RoomContentGenerator : MonoBehaviour
             
             foreach (var val in dungeonData.GetRoomFloorWithoutCorridors(roomData.Key)) // NO CORRIDORS
             {
-                // SHOULD BE ROOM KEYS
-   
+       
                 if (key.Equals(val)) 
                 {
                     Debug.Log("=========== KEY IN ROOMS ===============");
@@ -272,9 +243,30 @@ public class RoomContentGenerator : MonoBehaviour
 
         }
 
-
-
         return true;
+    }
+
+    private void SelectNPCSpawnPoint(DungeonData dungeonData)
+    {
+
+        int randomRoomIndex = UnityEngine.Random.Range(0, dungeonData.roomsDictionary.Count);
+        Vector2Int npcSpawnPoint = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
+
+        Vector2Int roomIndex = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
+
+
+
+        // creating npc room
+        List<GameObject> placedPrefabs = npcRoom.ProcessRoom(
+            npcSpawnPoint,
+            dungeonData.roomsDictionary.Values.ElementAt(randomRoomIndex),
+            dungeonData.GetRoomFloorWithoutCorridors(roomIndex)
+            );
+
+        spawnedObjects.AddRange(placedPrefabs);
+
+        dungeonData.roomsDictionary.Remove(npcSpawnPoint);
+
     }
 
 

@@ -21,6 +21,9 @@ public class GraphTest : MonoBehaviour
         Debug.Log("Dijkstra Highest Value: " + highestValue);
         graphReady = true;
 
+
+        /*
+
         // print dijstra result
         Debug.Log("=================DIJKSTRA RESULT===================");
         foreach (var kvp in dijkstraResult)
@@ -29,6 +32,8 @@ public class GraphTest : MonoBehaviour
         }
         Debug.Log("=================END===================");
 
+
+        */
     }
 
 
