@@ -7,11 +7,16 @@ using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
+    [SerializeField] private KeyCode interActKey = KeyCode.E;
+
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
     public UnityEvent OnAttack;
+    public UnityEvent<Item> OnInteract;
 
     //[SerializeField]
     //private InputActionReference movement, attack, pointerPosition;
+    private Item currentlyInteractedItem;
+
 
     private void Update()
     {
@@ -20,6 +25,11 @@ public class PlayerInput : MonoBehaviour
         OnPointerInput?.Invoke(GetPointerInput());
         if(Input.GetMouseButtonDown(0))
             OnAttack?.Invoke();
+
+        if (Input.GetKeyDown(interActKey))
+        {
+            OnInteract?.Invoke(currentlyInteractedItem);
+        }
     }
 
     private Vector2 GetPointerInput()
@@ -30,6 +40,10 @@ public class PlayerInput : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
+    public void SetInteractedItem(Item item)
+    {
+        currentlyInteractedItem = item;
+    }
     //private void OnEnable()
     //{
     //    attack.action.performed += PerformAttack;

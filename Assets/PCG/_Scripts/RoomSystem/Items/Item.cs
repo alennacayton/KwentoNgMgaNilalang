@@ -35,7 +35,6 @@ public class Item : MonoBehaviour
             nonDestructible = true;
 
         this.health = itemData.health;
-
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -57,7 +56,6 @@ public class Item : MonoBehaviour
             spriteRenderer.transform.DOComplete();
             Destroy(gameObject);
         }
-            
     }
 }
 

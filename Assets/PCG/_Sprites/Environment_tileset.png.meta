@@ -624,7 +624,7 @@ TextureImporter:
       213: 4813496044208744359
     second: Environment_tileset_206
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -645,6 +645,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -683,6 +684,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -698,6 +700,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4900,6 +4914,206 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Environment_tileset_1: -5085262239218561539
+      Environment_tileset_63: 4482658166772101457
+      Environment_tileset_88: -4954895119900034825
+      Environment_tileset_27: -9160970617582492924
+      Environment_tileset_77: -1930542104611540146
+      Environment_tileset_170: -970174648847509331
+      Environment_tileset_178: -1901276664385444701
+      Environment_tileset_192: 8280313543492505422
+      Environment_tileset_125: -4831754055754948810
+      Environment_tileset_127: -5648504712951951572
+      Environment_tileset_23: -953859002336022818
+      Environment_tileset_9: 25913929669979313
+      Environment_tileset_20: -2667963474649375373
+      Environment_tileset_119: -3816811045784798586
+      Environment_tileset_80: 3915642146181084088
+      Environment_tileset_112: -8563522104091751183
+      Environment_tileset_36: 8416123564895972499
+      Environment_tileset_92: 1323095436016214517
+      Environment_tileset_65: -3008989672670219919
+      Environment_tileset_74: -7094843779382251232
+      Environment_tileset_126: -6294087772237775261
+      Environment_tileset_42: 6289066626923071821
+      Environment_tileset_73: 3401118002426166419
+      Environment_tileset_173: -2269414570426829870
+      Environment_tileset_151: -5083536258349736787
+      Environment_tileset_114: -3102812146850850250
+      Environment_tileset_120: 7636570694551056911
+      Environment_tileset_22: 3055717069410481653
+      Environment_tileset_160: -6015434847976815310
+      Environment_tileset_149: -7736216317005225195
+      Environment_tileset_82: 6594386971586834556
+      Environment_tileset_202: 7198421197775015984
+      Environment_tileset_69: -1300904371036654204
+      Environment_tileset_190: 4306239532612952821
+      Environment_tileset_187: 361848618269407766
+      Environment_tileset_107: 6856164779289105532
+      Environment_tileset_64: -4077011281841678269
+      Environment_tileset_66: -6382792050244161187
+      Environment_tileset_153: -7442833599428933140
+      Environment_tileset_185: 6551712784647401094
+      Environment_tileset_51: -4393916206754885010
+      Environment_tileset_150: 5074503157754986687
+      Environment_tileset_43: -500653828884981609
+      Environment_tileset_41: -3013500984456022027
+      Environment_tileset_76: -6322289485861351524
+      Environment_tileset_115: 5324023504924643018
+      Environment_tileset_45: 7385060340761485606
+      Environment_tileset_180: 7744686720098288996
+      Environment_tileset_182: 5003691018095683523
+      Environment_tileset_31: 2451884615757388796
+      Environment_tileset_183: 8478964386479495075
+      Environment_tileset_13: -9155874602166719866
+      Environment_tileset_16: -605971669510801958
+      Environment_tileset_197: -5591584598628893961
+      Environment_tileset_121: -5483010264863583379
+      Environment_tileset_3: -2866315822080413073
+      Environment_tileset_169: -8803086986915888596
+      Environment_tileset_24: -8182346517573698769
+      Environment_tileset_159: 8781558774864687538
+      Environment_tileset_128: -6025902820036965821
+      Environment_tileset_181: -4122682317115288478
+      Environment_tileset_81: 3656860910190050762
+      Environment_tileset_123: -6402155607449904039
+      Environment_tileset_21: -2180340325263330508
+      Environment_tileset_198: -3926767634550651152
+      Environment_tileset_28: -8176265193356883278
+      Environment_tileset_144: -8683900827437403468
+      Environment_tileset_139: 2761349716619523060
+      Environment_tileset_11: 2497787664218402327
+      Environment_tileset_122: 8228262444650162137
+      Environment_tileset_200: -2573135746131214515
+      Environment_tileset_72: -5813192604695549941
+      Environment_tileset_189: -7380070874042394962
+      Environment_tileset_44: 5669291205028236679
+      Environment_tileset_70: 6449903786007837653
+      Environment_tileset_30: 984252168325210558
+      Environment_tileset_49: 709928439472267902
+      Environment_tileset_203: -5281375316445070299
+      Environment_tileset_103: -2342680177429681272
+      Environment_tileset_38: -7296634621271707330
+      Environment_tileset_96: -4991563882497765244
+      Environment_tileset_90: 78332270344435966
+      Environment_tileset_10: -5690735498861956779
+      Environment_tileset_5: -9009348813972860545
+      Environment_tileset_34: -7514323220760365288
+      Environment_tileset_25: -1668717147543200321
+      Environment_tileset_191: 1456592983904547101
+      Environment_tileset_201: 8826685963690779827
+      Environment_tileset_171: -2386326320388703732
+      Environment_tileset_168: -7600615550551780004
+      Environment_tileset_109: 8382843503104455316
+      Environment_tileset_14: -1541255107359391796
+      Environment_tileset_166: -1714230860642339567
+      Environment_tileset_94: -7179391087438842523
+      Environment_tileset_32: -4351233377196926465
+      Environment_tileset_52: -5706094148041638274
+      Environment_tileset_29: -3539119836520884097
+      Environment_tileset_155: -8080374363336814968
+      Environment_tileset_196: 5024255369284879435
+      Environment_tileset_131: 3423106073736490915
+      Environment_tileset_167: -258263470909353550
+      Environment_tileset_26: -4500007096923054941
+      Environment_tileset_116: 7828833817395095449
+      Environment_tileset_2: -6924421013113854979
+      Environment_tileset_164: 2702638575632896415
+      Environment_tileset_158: 5017195515774332258
+      Environment_tileset_124: 1856972579394348056
+      Environment_tileset_91: -2990225318957081159
+      Environment_tileset_4: -3170539742661194112
+      Environment_tileset_19: 6063997417923815492
+      Environment_tileset_184: 2737893100654721
+      Environment_tileset_89: 6757262189812151265
+      Environment_tileset_37: -6541141127257519003
+      Environment_tileset_60: 1306473935290289854
+      Environment_tileset_71: 6235142928473358242
+      Environment_tileset_157: -6368142814293075174
+      Environment_tileset_104: -8437561420354425432
+      Environment_tileset_188: -3215790901080419718
+      Environment_tileset_111: -501928035485321772
+      Environment_tileset_79: -9170150509043523920
+      Environment_tileset_59: -5215905595201773547
+      Environment_tileset_95: 2683683356923621810
+      Environment_tileset_35: -1236445332384284643
+      Environment_tileset_156: -6585373791936839018
+      Environment_tileset_206: 4813496044208744359
+      Environment_tileset_15: 6494211682048152100
+      Environment_tileset_176: 1100709930259105909
+      Environment_tileset_154: 1526674825685889416
+      Environment_tileset_162: -6392658840668830571
+      Environment_tileset_118: 9015294263813102986
+      Environment_tileset_161: -2682128426805289206
+      Environment_tileset_174: 8764512997928352599
+      Environment_tileset_199: -6577673964074387802
+      Environment_tileset_132: -2445926756324235752
+      Environment_tileset_117: -1582408142516589049
+      Environment_tileset_195: 4453636462231382762
+      Environment_tileset_142: -6832823576040794108
+      Environment_tileset_177: 8701711323715298980
+      Environment_tileset_67: 3259129644320067929
+      Environment_tileset_193: -5405087049407111378
+      Environment_tileset_57: 4973503981845733186
+      Environment_tileset_100: 4548220756659610735
+      Environment_tileset_102: 1964298712505124887
+      Environment_tileset_130: -2824851154410630412
+      Environment_tileset_165: 1934124737804469893
+      Environment_tileset_194: 3909973351846256522
+      Environment_tileset_148: -7713072489078417233
+      Environment_tileset_205: 1260367584388236278
+      Environment_tileset_146: -7165952313432864200
+      Environment_tileset_147: -3806692682665059573
+      Environment_tileset_12: 4575362965252127176
+      Environment_tileset_106: -6142001763422894559
+      Environment_tileset_113: 3326623374128789830
+      Environment_tileset_46: -4102632331980934841
+      Environment_tileset_172: -5898216962981009351
+      Environment_tileset_134: -4365061765652874986
+      Environment_tileset_204: 2483549171259322957
+      Environment_tileset_6: 1087017443796394502
+      Environment_tileset_152: 6593248010616318443
+      Environment_tileset_97: 9134294261091365937
+      Environment_tileset_110: 5518463211234900316
+      Environment_tileset_0: -9020315380572421402
+      Environment_tileset_50: -444339510352765826
+      Environment_tileset_58: 5636131296315009221
+      Environment_tileset_186: 1753976253247254695
+      Environment_tileset_48: -7046865360389918647
+      Environment_tileset_40: 5398502371136639393
+      Environment_tileset_141: 8988361449360337984
+      Environment_tileset_33: 4161211445731604198
+      Environment_tileset_145: -8982423526794150870
+      Environment_tileset_129: -1839921478919012145
+      Environment_tileset_135: 6126160140794269515
+      Environment_tileset_75: 5991837682651848557
+      Environment_tileset_140: -2597572724191378314
+      Environment_tileset_8: 6003384124281138357
+      Environment_tileset_175: -5314291368673276729
+      Environment_tileset_99: -7112829476279288045
+      Environment_tileset_7: -1099564950726758766
+      Environment_tileset_56: 4823542373498226636
+      Environment_tileset_53: -6970104947821442199
+      Environment_tileset_78: 1198069587390247197
+      Environment_tileset_83: -8120534273780929804
+      Environment_tileset_101: 5393838425413181959
+      Environment_tileset_18: -5594639784167447473
+      Environment_tileset_105: -4518920678821646872
+      Environment_tileset_133: -4816368454108397079
+      Environment_tileset_163: 4336249635794238918
+      Environment_tileset_62: 8144792676111515244
+      Environment_tileset_136: 5513619029806797499
+      Environment_tileset_138: 734101094722684721
+      Environment_tileset_98: -7790862013436851204
+      Environment_tileset_143: -4414212881322113197
+      Environment_tileset_93: 4374531618483006309
+      Environment_tileset_108: 3598181481718979644
+      Environment_tileset_137: -3316562315631210038
+      Environment_tileset_17: -2415463959764788417
+      Environment_tileset_47: -4197238130795357640
+      Environment_tileset_61: -3816224249779114357
+      Environment_tileset_179: 4731757663878660559
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
