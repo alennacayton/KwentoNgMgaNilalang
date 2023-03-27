@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Item : MonoBehaviour
+public class Object : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer spriteRenderer;
@@ -20,9 +20,15 @@ public class Item : MonoBehaviour
     [SerializeField]
     private GameObject hitFeedback, destoyFeedback;
 
+    [SerializeField]
+    private bool interactable;
+
+    [SerializeField]
+    public UnityEvent OnInteract;
+
     public UnityEvent OnGetHit { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
-    public void Initialize(ItemData itemData)
+    public void Initialize(ObjectData itemData)
     {
         //set sprite
         spriteRenderer.sprite = itemData.sprite;
@@ -32,9 +38,15 @@ public class Item : MonoBehaviour
         itemCollider.offset = spriteRenderer.transform.localPosition;
 
         if (itemData.nonDestructible)
-            nonDestructible = true;
+            this.nonDestructible = true;
 
         this.health = itemData.health;
+
+        if (itemData.interactable)
+            this.interactable = true;
+
+        if (itemData.OnInteract != null)
+            this.OnInteract = itemData.OnInteract;
     }
 
     public void GetHit(int damage, GameObject damageDealer)
@@ -56,6 +68,14 @@ public class Item : MonoBehaviour
             spriteRenderer.transform.DOComplete();
             Destroy(gameObject);
         }
+    }
+
+    public void TransferItems()
+    {
+        ObjectInventory itemInventory = GetComponent<ObjectInventory>();
+        itemInventory.TransferItemsToPlayer();
+
+        Debug.Log("Transferred To Player");
     }
 }
 

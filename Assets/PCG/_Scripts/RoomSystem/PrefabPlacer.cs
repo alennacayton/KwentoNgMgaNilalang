@@ -7,9 +7,8 @@ using UnityEngine;
 public class PrefabPlacer : MonoBehaviour
 {
     [SerializeField]
-    private GameObject itemPrefab;
-
-    public List<GameObject> PlaceEnemies(List<EnemyPlacementData> enemyPlacementData, ItemPlacementHelper itemPlacementHelper)
+    private GameObject objectPrefab;
+    public List<GameObject> PlaceEnemies(List<EnemyPlacementData> enemyPlacementData, ObjectPlacementHelper itemPlacementHelper)
     {
         List<GameObject> placedObjects = new List<GameObject>();
 
@@ -33,37 +32,36 @@ public class PrefabPlacer : MonoBehaviour
         return placedObjects;
     }
 
-    public List<GameObject> PlaceAllItems(List<ItemPlacementData> itemPlacementData, ItemPlacementHelper itemPlacementHelper)
+    public List<GameObject> PlaceAllItems(List<ObjectPlacementData> itemPlacementData, ObjectPlacementHelper itemPlacementHelper)
     {
         List<GameObject> placedObjects = new List<GameObject>();
 
-        IEnumerable<ItemPlacementData> sortedList = new List<ItemPlacementData>(itemPlacementData).OrderByDescending(placementData => placementData.itemData.size.x * placementData.itemData.size.y);
-
+        IEnumerable<ObjectPlacementData> sortedList = new List<ObjectPlacementData>(itemPlacementData).OrderByDescending(placementData => placementData.objectData.size.x * placementData.objectData.size.y);
         foreach (var placementData in sortedList)
         {
             for (int i = 0; i < placementData.Quantity; i++)
             {
                 Vector2? possiblePlacementSpot = itemPlacementHelper.GetItemPlacementPosition(
-                    placementData.itemData.placementType, 
+                    placementData.objectData.placementType, 
                     100, 
-                    placementData.itemData.size, 
-                    placementData.itemData.addOffset);
+                    placementData.objectData.size, 
+                    placementData.objectData.addOffset);
 
 
                 if (possiblePlacementSpot.HasValue)
                 {
 
-                    placedObjects.Add(PlaceItem(placementData.itemData, possiblePlacementSpot.Value));
+                    placedObjects.Add(PlaceItem(placementData.objectData, possiblePlacementSpot.Value));
                 }
             }
         }
         return placedObjects;
     }
-    private GameObject PlaceItem(ItemData item, Vector2 placementPosition)
+    private GameObject PlaceItem(ObjectData item, Vector2 placementPosition)
     {
-        GameObject newItem = CreateObject(itemPrefab,placementPosition);
+        GameObject newItem = CreateObject(objectPrefab,placementPosition);
         //GameObject newItem = Instantiate(itemPrefab, placementPosition, Quaternion.identity);
-        newItem.GetComponent<Item>().Initialize(item);
+        newItem.GetComponent<Object>().Initialize(item);
         return newItem;
     }
 

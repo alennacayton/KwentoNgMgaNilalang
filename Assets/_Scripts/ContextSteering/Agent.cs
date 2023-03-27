@@ -7,7 +7,6 @@ public class Agent : MonoBehaviour
 {
     private AgentAnimations agentAnimations;
     private AgentMover agentMover;
-    private PlayerInput playerInput;
 
     private Vector2 pointerInput, movementInput;
 
@@ -29,7 +28,6 @@ public class Agent : MonoBehaviour
     {
         agentAnimations = GetComponentInChildren<AgentAnimations>();
         agentMover = GetComponent<AgentMover>();
-        playerInput = GetComponent<PlayerInput>();
     }
 
     private void AnimateCharacter()
@@ -37,15 +35,5 @@ public class Agent : MonoBehaviour
         Vector2 lookDirection = pointerInput - (Vector2)transform.position;
         agentAnimations.RotateToPointer(lookDirection);
         agentAnimations.PlayAnimation(MovementInput);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Item itemComponent = collision.collider.gameObject.GetComponent<Item>();
-        
-        if (itemComponent != null)
-        {
-           playerInput.SetInteractedItem(itemComponent);
-        }
     }
 }

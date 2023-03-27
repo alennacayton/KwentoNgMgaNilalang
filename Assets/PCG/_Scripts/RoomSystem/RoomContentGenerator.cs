@@ -53,9 +53,6 @@ public class RoomContentGenerator : MonoBehaviour
 
         }
         Debug.Log(dungeonData.roomsDictionary.Count);
-
-
-
         */
 
         foreach (GameObject item in spawnedObjects)
@@ -71,11 +68,11 @@ public class RoomContentGenerator : MonoBehaviour
 
         foreach (GameObject item in spawnedObjects)
         {
-            if(item != null)
+            if (item != null)
                 item.transform.SetParent(itemParent, false);
         }
 
-
+        FindObjectOfType<InventoryGenerator>().Initialize();
     }
 
     // Selects random room as player spawn point

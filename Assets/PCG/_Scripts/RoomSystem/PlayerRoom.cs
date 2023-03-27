@@ -8,7 +8,7 @@ public class PlayerRoom : RoomGenerator
 {
     public GameObject player;
 
-    public List<ItemPlacementData> itemData;
+    public List<ObjectPlacementData> objectData;
 
     [SerializeField]
     private PrefabPlacer prefabPlacer;
@@ -19,11 +19,11 @@ public class PlayerRoom : RoomGenerator
         HashSet<Vector2Int> roomFloorNoCorridors)
     {
 
-        ItemPlacementHelper itemPlacementHelper = 
-            new ItemPlacementHelper(roomFloor, roomFloorNoCorridors);
+        ObjectPlacementHelper itemPlacementHelper = 
+            new ObjectPlacementHelper(roomFloor, roomFloorNoCorridors);
 
         List<GameObject> placedObjects = 
-            prefabPlacer.PlaceAllItems(itemData, itemPlacementHelper);
+            prefabPlacer.PlaceAllItems(objectData, itemPlacementHelper);
 
         Vector2Int playerSpawnPoint = roomCenter;
 
@@ -48,9 +48,9 @@ public abstract class PlacementData
 }
 
 [Serializable]
-public class ItemPlacementData : PlacementData
+public class ObjectPlacementData : PlacementData
 {
-    public ItemData itemData;
+    public ObjectData objectData;
 }
 
 [Serializable]

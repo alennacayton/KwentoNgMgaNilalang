@@ -7,15 +7,14 @@ using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] private KeyCode interActKey = KeyCode.E;
+    [SerializeField] private KeyCode interactKey = KeyCode.E;
 
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
     public UnityEvent OnAttack;
-    public UnityEvent<Item> OnInteract;
 
     //[SerializeField]
     //private InputActionReference movement, attack, pointerPosition;
-    private Item currentlyInteractedItem;
+    private Object currentlyInteractableObject;
 
 
     private void Update()
@@ -26,10 +25,12 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
             OnAttack?.Invoke();
 
-        if (Input.GetKeyDown(interActKey))
+        if(Input.GetKeyDown(interactKey))
         {
-            OnInteract?.Invoke(currentlyInteractedItem);
+            Debug.Log("Key E is Down");
+            currentlyInteractableObject.OnInteract?.Invoke();
         }
+
     }
 
     private Vector2 GetPointerInput()
@@ -40,10 +41,19 @@ public class PlayerInput : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
-    public void SetInteractedItem(Item item)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        currentlyInteractedItem = item;
+        if(collision.collider.tag == "Object")
+        {
+            this.currentlyInteractableObject = collision.collider.gameObject.GetComponent<Object>();
+        }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        this.currentlyInteractableObject = null;
+    }
+
     //private void OnEnable()
     //{
     //    attack.action.performed += PerformAttack;

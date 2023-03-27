@@ -3,7 +3,14 @@ guid: 1f6b5f46c8d246b4ea3c5d7aa2c4c835
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerRoom: {instanceID: 0}
+  - defaultRoom: {instanceID: 0}
+  - creatureRoom: {instanceID: 0}
+  - npcRoom: {instanceID: 0}
+  - graphTest: {instanceID: 0}
+  - itemParent: {instanceID: 0}
+  - cinemachineCamera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

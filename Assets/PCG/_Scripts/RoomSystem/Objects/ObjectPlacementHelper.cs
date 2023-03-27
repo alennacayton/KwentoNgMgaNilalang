@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ItemPlacementHelper
+public class ObjectPlacementHelper
 {
     Dictionary<PlacementType, HashSet<Vector2Int>> 
         tileByType = new Dictionary<PlacementType, HashSet<Vector2Int>>();
@@ -12,7 +12,7 @@ public class ItemPlacementHelper
     HashSet<Vector2Int> roomFloorNoCorridor;
 
 
-    public ItemPlacementHelper(HashSet<Vector2Int> roomFloor, 
+    public ObjectPlacementHelper(HashSet<Vector2Int> roomFloor, 
         HashSet<Vector2Int> roomFloorNoCorridor)
     {
         Graph graph = new Graph(roomFloor);
