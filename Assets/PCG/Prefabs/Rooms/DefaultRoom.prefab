@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8264800944264846316}
   - component: {fileID: 7777476307801422254}
   m_Layer: 0
-  m_Name: FightPitRoom
+  m_Name: DefaultRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,15 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlacer: {fileID: 4341242197028722173, guid: 49d1de73f44f58940a43bf538b290285, type: 3}
-  enemyPlacementData:
-  - minQuantity: 5
-    maxQuantity: 10
-    enemyPrefab: {fileID: 3094051805721863274, guid: befb4cd3e122c99418502e04ec5a05a0, type: 3}
-    enemySize: {x: 1, y: 1}
   itemData:
-  - minQuantity: 3
-    maxQuantity: 6
-    objectData: {fileID: 11400000, guid: 91ee0610a5f48cb4db041bf04f6460bd, type: 2}
   - minQuantity: 2
     maxQuantity: 4
     objectData: {fileID: 11400000, guid: fcf87a5e0042a59469f120de940f4d83, type: 2}

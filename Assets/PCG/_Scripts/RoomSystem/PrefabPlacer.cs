@@ -8,29 +8,6 @@ public class PrefabPlacer : MonoBehaviour
 {
     [SerializeField]
     private GameObject objectPrefab;
-    public List<GameObject> PlaceEnemies(List<EnemyPlacementData> enemyPlacementData, ObjectPlacementHelper itemPlacementHelper)
-    {
-        List<GameObject> placedObjects = new List<GameObject>();
-
-        foreach (var placementData in enemyPlacementData)
-        {
-            for (int i = 0; i < placementData.Quantity; i++)
-            {
-                Vector2? possiblePlacementSpot = itemPlacementHelper.GetItemPlacementPosition(
-                    PlacementType.OpenSpace,
-                    100,
-                    placementData.enemySize,
-                    false
-                    );
-                if (possiblePlacementSpot.HasValue)
-                {
-
-                    placedObjects.Add(CreateObject(placementData.enemyPrefab, possiblePlacementSpot.Value + new Vector2(0.5f, 0.5f))); //Instantiate(placementData.enemyPrefab,possiblePlacementSpot.Value + new Vector2(0.5f, 0.5f), Quaternion.identity)
-                }
-            }
-        }
-        return placedObjects;
-    }
 
     public List<GameObject> PlaceAllItems(List<ObjectPlacementData> itemPlacementData, ObjectPlacementHelper itemPlacementHelper)
     {

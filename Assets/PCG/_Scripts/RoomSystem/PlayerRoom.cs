@@ -53,10 +53,4 @@ public class ObjectPlacementData : PlacementData
     public ObjectData objectData;
 }
 
-[Serializable]
-public class EnemyPlacementData : PlacementData
-{
-    public GameObject enemyPrefab;
-    public Vector2Int enemySize = Vector2Int.one;
-}
 
