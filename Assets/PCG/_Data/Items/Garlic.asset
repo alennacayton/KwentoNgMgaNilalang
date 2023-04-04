@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a83f2a5bea8447489822be80764763e, type: 3}
   m_Name: Garlic
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: da7129ed6a246f048a49d8d97de2d2d4, type: 3}
+  sprite: {fileID: -717682031, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   size: {x: 1, y: 1}
   placementType: 0
   addOffset: 0
