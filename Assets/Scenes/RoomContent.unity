@@ -267,6 +267,7 @@ MonoBehaviour:
   defaultRoom: {fileID: 7777476307801422254, guid: 377fa56baa708c045ab0ed6a3b4e6926, type: 3}
   creatureRoom: {fileID: 2280236548925380396, guid: 9916b7bebab76ae43a74329ca8cba925, type: 3}
   npcRoom: {fileID: 2847524656706069892, guid: 73fafdb1bb8d36144a673b11529aae2e, type: 3}
+  questRoom: {fileID: -5952130733250582606, guid: 49de161fde7647f4fb3bcded18f91255, type: 3}
   graphTest: {fileID: 826419577}
   itemParent: {fileID: 1607766029}
   cinemachineCamera: {fileID: 1792208467}
@@ -977,7 +978,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fb76b1bb1cd844681f2a2c61379a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerSuccessful: 1
 --- !u!4 &832401863
 Transform:
   m_ObjectHideFlags: 0
@@ -24443,9 +24443,9 @@ MonoBehaviour:
   tilemapVisualizer: {fileID: 2072839850}
   startPosition: {x: 0, y: 0}
   randomWalkParameters: {fileID: 11400000, guid: ed58e9b5cc90cfa4c8029a69a7f0f788, type: 2}
-  corridorLength: 20
-  corridorCount: 15
-  roomPercent: 0.6
+  corridorLength: 17
+  corridorCount: 20
+  roomPercent: 0.7
   showRoomGizmo: 0
   showCorridorsGizmo: 0
   OnDungeonFloorReady:
