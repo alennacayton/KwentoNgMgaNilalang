@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -3125,7 +3125,6 @@ TextureImporter:
       button UI_118: -957631977
       button UI_121: -1745376764
       button UI_72: -2145454033
-      button UI_140: -2022304257
       button UI_122: -622596058
       button UI_104: -139735070
       button UI_71: 1659127729
@@ -3154,18 +3153,18 @@ TextureImporter:
       button UI_97: 1639359275
       button UI_89: -613509658
       button UI_0: -2076107516
-      button UI_23: -1674782253
-      button UI_80: -541879408
+      button UI_142: -1766197179
       button UI_100: 2130719894
+      button UI_23: -1674782253
       button UI_64: -1287670329
       button UI_31: 1763536466
       button UI_11: -1640973174
       button UI_119: -2078742121
+      button UI_80: -541879408
       button UI_101: 908510430
       button UI_28: 1093643089
       button UI_38: -1496499808
       button UI_50: -2153761
-      button UI_142: -1766197179
       button UI_134: 2118612346
       button UI_99: -182362890
       button UI_37: 1772505036
@@ -3186,8 +3185,8 @@ TextureImporter:
       button UI_127: -45369932
       button UI_40: 192019448
       button UI_21: -1422138567
-      button UI_29: 1904461442
       button UI_85: 633200877
+      button UI_29: 1904461442
       button UI_16: 998941079
       button UI_60: 514565589
       button UI_87: 852473689
@@ -3248,12 +3247,13 @@ TextureImporter:
       button UI_41: 663149367
       button UI_83: 1118494427
       button UI_107: 1838754105
+      button UI_140: -2022304257
       button UI_6: -892729333
-      button UI_27: 654251892
       button UI_55: -1082289433
-      button UI_111: -247028394
+      button UI_27: 654251892
       button UI_128: 334154122
       button UI_102: -887607457
+      button UI_111: -247028394
       button UI_25: 562021500
       button UI_96: -1483384822
       button UI_135: 1482073996

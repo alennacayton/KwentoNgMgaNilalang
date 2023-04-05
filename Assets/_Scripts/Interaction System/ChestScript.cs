@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestScript : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ChestScript : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private Image noteImg;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -24,6 +27,12 @@ public class ChestScript : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = chestClosed;
+
+        // Get a reference to the GameObject
+        GameObject myObject = GameObject.Find("Note");
+
+        // Get a reference to the Image component on the GameObject
+        noteImg = myObject.GetComponent<Image>();
     }
 
     private void Update()
@@ -37,11 +46,13 @@ public class ChestScript : MonoBehaviour
             {
                 spriteRenderer.sprite = chestOpen;
                 Debug.Log("Chest has been opened!!");
+                noteImg.enabled = true;
             }
             else
             {
                 spriteRenderer.sprite = chestClosed;
                 Debug.Log("Chest has been closed!!");
+                noteImg.enabled = false;
             }
         }
 
