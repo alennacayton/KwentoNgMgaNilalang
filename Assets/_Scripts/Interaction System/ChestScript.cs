@@ -70,6 +70,7 @@ public class ChestScript : MonoBehaviour
     {
         //Debug.Log("Item is Out of Range");
         isInRange = false;
+        noteImg.enabled = false;
     }
 
 
