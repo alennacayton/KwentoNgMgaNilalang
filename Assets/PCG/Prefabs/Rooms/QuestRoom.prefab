@@ -45,10 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlacer: {fileID: 4341242197028722173, guid: 49d1de73f44f58940a43bf538b290285, type: 3}
-  itemData:
+  objectPlacementData:
   - minQuantity: 1
     maxQuantity: 1
-    objectData: {fileID: 11400000, guid: 84f157c9959fb7e4eb1db80378e3593a, type: 2}
+    objectPrefab: {fileID: 435280441804084782, guid: 2d7f802084b26aa4f9d4a73e99ab481a, type: 3}
+    objectSize: {x: 1, y: 1}
+  itemData:
   - minQuantity: 1
     maxQuantity: 3
     objectData: {fileID: 11400000, guid: 9850842c4429c9b4a90de451ef5ec2f1, type: 2}

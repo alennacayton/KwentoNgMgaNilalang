@@ -6,6 +6,7 @@ public class QuestRoom : RoomGenerator
 {
     [SerializeField]
     private PrefabPlacer prefabPlacer;
+    public List<PrefabPlacementData> objectPlacementData;
 
     public List<ObjectPlacementData> itemData;
 
@@ -17,6 +18,9 @@ public class QuestRoom : RoomGenerator
         List<GameObject> placedObjects =
             prefabPlacer.PlaceAllItems(itemData, itemPlacementHelper);
 
+
+
+        placedObjects.AddRange(prefabPlacer.PlaceInteractableObject(objectPlacementData, itemPlacementHelper));
 
         return placedObjects;
     }

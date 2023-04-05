@@ -25,11 +25,16 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
             OnAttack?.Invoke();
 
+
+
+        /*
         if(Input.GetKeyDown(interactKey))
         {
             Debug.Log("Key E is Down");
             currentlyInteractableObject.OnInteract?.Invoke();
         }
+
+        */
 
     }
 

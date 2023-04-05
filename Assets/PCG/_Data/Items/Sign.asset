@@ -10,27 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a83f2a5bea8447489822be80764763e, type: 3}
-  m_Name: NPC
+  m_Name: Sign
   m_EditorClassIdentifier: 
-  sprite: {fileID: -7269268079623435177, guid: 4261079917e136e4a83e6b5f98e11f09, type: 3}
+  sprite: {fileID: -1099564950726758766, guid: 59010b57e7642e24b8b581d9f7c75a31, type: 3}
   size: {x: 1, y: 1}
   placementType: 0
   addOffset: 0
-  health: 1
   nonDestructible: 0
   interactable: 0
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
