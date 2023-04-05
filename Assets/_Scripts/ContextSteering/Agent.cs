@@ -15,11 +15,9 @@ public class Agent : MonoBehaviour
 
     private void Update()
     {
-        //pointerInput = GetPointerInput();
-        //movementInput = movement.action.ReadValue<Vector2>().normalized;
-
+     
         agentMover.MovementInput = MovementInput;
-        AnimateCharacter();
+       // AnimateCharacter();
     }
 
  
@@ -29,11 +27,12 @@ public class Agent : MonoBehaviour
         agentAnimations = GetComponentInChildren<AgentAnimations>();
         agentMover = GetComponent<AgentMover>();
     }
-
+    /*
     private void AnimateCharacter()
     {
         Vector2 lookDirection = pointerInput - (Vector2)transform.position;
         agentAnimations.RotateToPointer(lookDirection);
         agentAnimations.PlayAnimation(MovementInput);
     }
+    */
 }
