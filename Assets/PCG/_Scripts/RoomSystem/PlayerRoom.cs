@@ -54,3 +54,13 @@ public class ObjectPlacementData : PlacementData
 }
 
 
+[Serializable]
+public class PrefabPlacementData : PlacementData
+{
+    public GameObject objectPrefab;
+    public Vector2Int objectSize = Vector2Int.one;
+}
+
+
+
+

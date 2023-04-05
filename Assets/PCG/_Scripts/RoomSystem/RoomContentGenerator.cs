@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class RoomContentGenerator : MonoBehaviour
 {
     [SerializeField]
-    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom;
+    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom, questRoom;
 
     List<GameObject> spawnedObjects = new List<GameObject>();
 
@@ -64,6 +64,7 @@ public class RoomContentGenerator : MonoBehaviour
         SelectPlayerSpawnPoint(dungeonData);
         SelectBossSpawnPoint(dungeonData);
         SelectNPCSpawnPoint(dungeonData);
+        SelectQuestRooms(dungeonData);
         SelectEnemySpawnPoints(dungeonData);
 
         foreach (GameObject item in spawnedObjects)
@@ -116,7 +117,7 @@ public class RoomContentGenerator : MonoBehaviour
     private void SelectBossSpawnPoint(DungeonData dungeonData)
     {
 
-
+        checkRoomsEmpty(dungeonData);
         /*
 
 
@@ -161,7 +162,7 @@ public class RoomContentGenerator : MonoBehaviour
 
 
         */
-        
+
 
         // ================================= USING DIJKSTRA ALGO =================================================
 
@@ -225,6 +226,7 @@ public class RoomContentGenerator : MonoBehaviour
     private Boolean isCorridor(Vector2Int key, DungeonData dungeonData)
     {
 
+
         foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
         {
             
@@ -245,6 +247,7 @@ public class RoomContentGenerator : MonoBehaviour
 
     private void SelectNPCSpawnPoint(DungeonData dungeonData)
     {
+        checkRoomsEmpty(dungeonData);
 
         int randomRoomIndex = UnityEngine.Random.Range(0, dungeonData.roomsDictionary.Count);
         Vector2Int npcSpawnPoint = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
@@ -267,9 +270,52 @@ public class RoomContentGenerator : MonoBehaviour
     }
 
 
+    private void SelectQuestRooms(DungeonData dungeonData)
+    {
+        checkRoomsEmpty(dungeonData);
+        // Assigns first 3 rooms as quest rooms
+        HashSet<Vector2Int> temp = new HashSet<Vector2Int>(3); // keys to remove
+
+
+
+        for (int i = 0; i < 3; i++)
+        {
+            KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData = dungeonData.roomsDictionary.ElementAt(i);
+            spawnedObjects.AddRange(
+                questRoom.ProcessRoom(
+                    roomData.Key,
+                    roomData.Value,
+                    dungeonData.GetRoomFloorWithoutCorridors(roomData.Key)
+                )
+            );
+
+
+            temp.Add(roomData.Key);
+            
+        }
+
+
+
+
+        foreach (Vector2Int key in temp)
+        {
+            if (dungeonData.roomsDictionary.ContainsKey(key))
+            {
+                dungeonData.roomsDictionary.Remove(key);
+            }
+        }
+
+
+
+
+    }
+
+
+
 
     private void SelectEnemySpawnPoints(DungeonData dungeonData)
     {
+        checkRoomsEmpty(dungeonData);
         // creating the rest of the rooms
 
         foreach (KeyValuePair<Vector2Int,HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
@@ -285,5 +331,16 @@ public class RoomContentGenerator : MonoBehaviour
 
         }
     }
+
+
+    private void checkRoomsEmpty(DungeonData dungeonData)
+    {
+        if (dungeonData.roomsDictionary.Equals(null))
+        {
+            throw new Exception("Room Dictionary is NULL");
+
+        }
+    }
+
 
 }

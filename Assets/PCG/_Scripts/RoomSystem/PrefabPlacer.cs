@@ -9,6 +9,32 @@ public class PrefabPlacer : MonoBehaviour
     [SerializeField]
     private GameObject objectPrefab;
 
+    public List<GameObject> PlaceInteractableObject(List<PrefabPlacementData> objectPlacementData, ObjectPlacementHelper itemPlacementHelper)
+    {
+        List<GameObject> placedObjects = new List<GameObject>();
+
+        foreach (var placementData in objectPlacementData)
+        {
+            for (int i = 0; i < placementData.Quantity; i++)
+            {
+                Vector2? possiblePlacementSpot = itemPlacementHelper.GetItemPlacementPosition(
+                    PlacementType.OpenSpace,
+                    100,
+                    placementData.objectSize,
+                    false
+                    );
+                if (possiblePlacementSpot.HasValue)
+                {
+
+                    placedObjects.Add(CreateObject(placementData.objectPrefab, possiblePlacementSpot.Value + new Vector2(0.5f, 0.5f)));
+                }
+            }
+        }
+        return placedObjects;
+    }
+
+
+
     public List<GameObject> PlaceAllItems(List<ObjectPlacementData> itemPlacementData, ObjectPlacementHelper itemPlacementHelper)
     {
         List<GameObject> placedObjects = new List<GameObject>();

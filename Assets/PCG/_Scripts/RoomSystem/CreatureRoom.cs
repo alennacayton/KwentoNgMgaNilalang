@@ -6,12 +6,12 @@ public class CreatureRoom : RoomGenerator
 {
     [SerializeField]
     private PrefabPlacer prefabPlacer;
-
+    public List<PrefabPlacementData> objectPlacementData;
     public List<ObjectPlacementData> itemData;
 
     public override List<GameObject> ProcessRoom(Vector2Int roomCenter, HashSet<Vector2Int> roomFloor, HashSet<Vector2Int> roomFloorNoCorridors)
     {
-        Debug.Log("Test");
+      
 
         ObjectPlacementHelper itemPlacementHelper =
             new ObjectPlacementHelper(roomFloor, roomFloorNoCorridors);
@@ -19,7 +19,7 @@ public class CreatureRoom : RoomGenerator
         List<GameObject> placedObjects =
             prefabPlacer.PlaceAllItems(itemData, itemPlacementHelper);
 
-
+        placedObjects.AddRange(prefabPlacer.PlaceInteractableObject(objectPlacementData, itemPlacementHelper));
         return placedObjects;
     }
 }
