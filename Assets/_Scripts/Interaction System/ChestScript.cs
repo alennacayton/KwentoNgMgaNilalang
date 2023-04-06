@@ -16,6 +16,7 @@ public class ChestScript : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Image noteImg;
+    private Text noteTxt;
 
     // Start is called before the first frame update
     private void Start()
@@ -30,9 +31,11 @@ public class ChestScript : MonoBehaviour
 
         // Get a reference to the GameObject
         GameObject myObject = GameObject.Find("Note");
+        GameObject myObjectText = GameObject.Find("NoteText");
 
         // Get a reference to the Image component on the GameObject
         noteImg = myObject.GetComponent<Image>();
+        noteTxt = myObjectText.GetComponent<Text>();
     }
 
     private void Update()
@@ -47,12 +50,14 @@ public class ChestScript : MonoBehaviour
                 spriteRenderer.sprite = chestOpen;
                 Debug.Log("Chest has been opened!!");
                 noteImg.enabled = true;
+                noteTxt.enabled = true;
             }
             else
             {
                 spriteRenderer.sprite = chestClosed;
                 Debug.Log("Chest has been closed!!");
                 noteImg.enabled = false;
+                noteTxt.enabled = false;
             }
         }
 
@@ -70,7 +75,9 @@ public class ChestScript : MonoBehaviour
     {
         //Debug.Log("Item is Out of Range");
         isInRange = false;
+
         noteImg.enabled = false;
+        noteTxt.enabled = false;
     }
 
 

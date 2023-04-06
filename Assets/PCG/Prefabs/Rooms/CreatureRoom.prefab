@@ -48,7 +48,7 @@ MonoBehaviour:
   objectPlacementData:
   - minQuantity: 1
     maxQuantity: 1
-    objectPrefab: {fileID: 1139334513200517795, guid: 9f034b5bd4558b44ca0acea4cbac8c4a, type: 3}
+    objectPrefab: {fileID: 6389587811116226607, guid: fa4363c527108a546a6da2a265cf8edd, type: 3}
     objectSize: {x: 1, y: 1}
   itemData:
   - minQuantity: 1
