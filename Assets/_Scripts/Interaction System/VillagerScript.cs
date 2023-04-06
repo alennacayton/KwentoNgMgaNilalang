@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VillagerScript : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class VillagerScript : MonoBehaviour
         isInRange = false;
         interactKey = KeyCode.E;
         GetComponent<CircleCollider2D>().radius = triggerRadius;
+
+
 
         // Get a reference to the GameObject
         GameObject myObject = GameObject.Find("NpcDialogue");
