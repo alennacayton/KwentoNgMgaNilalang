@@ -43,6 +43,7 @@ public class VillagerScript : MonoBehaviour
             //   GetComponent<Image>().gameObject.SetActive(true);
 
             myImage.enabled = true;
+            npcText.text = "Hello there young man! I need to sauté some pork, but i'm out of garlic. Can you help me find some?";
             npcText.enabled = true;
         }
     }

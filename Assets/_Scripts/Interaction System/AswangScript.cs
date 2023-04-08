@@ -31,7 +31,7 @@ public class AswangScript : MonoBehaviour
         myImage = myObject.GetComponent<Image>();
         aswangText = myObjectText.GetComponent<Text>();
 
-        aswangText.text = "RAAAAAAAAAAAAAAAWRRR";
+        
 
  
     }
@@ -45,6 +45,7 @@ public class AswangScript : MonoBehaviour
 
 
             myImage.enabled = true;
+            aswangText.text = "*eerie, flapping noise*";
             aswangText.enabled = true;
 
 
