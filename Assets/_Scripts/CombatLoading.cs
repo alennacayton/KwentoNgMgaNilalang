@@ -7,21 +7,21 @@ public class CombatLoading : MonoBehaviour
 {
     public void ProceedtoLevelTwo()
     {
-        //SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("AreaTwo");
     }
 
     public void ProceedtoLevelThree()
     {
-        //SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("AreaThree");
     }
 
     public void ProceedtoLevelFour()
     {
-        //SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("AreaFour");
     }
 
     public void FinishGame()
     {
-        //SceneManager.LoadScene("End");
+        SceneManager.LoadScene(0);
     }
 }

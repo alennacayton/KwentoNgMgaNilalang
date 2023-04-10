@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2334184184601206650}
   - component: {fileID: 2334184184601206652}
   - component: {fileID: 2334184184601206648}
-  - component: {fileID: 2334184184601206535}
   - component: {fileID: 2334184184601206534}
   - component: {fileID: 3623326460163637102}
   - component: {fileID: 2124840705820649637}
@@ -126,7 +125,7 @@ MonoBehaviour:
   OnHitWithReference:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2334184184601206535}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstantiateHelper, Assembly-CSharp
         m_MethodName: CreatePrefab
         m_Mode: 1
@@ -153,7 +152,7 @@ MonoBehaviour:
   OnDeathWithReference:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2334184184601206535}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InstantiateHelper, Assembly-CSharp
         m_MethodName: CreatePrefab
         m_Mode: 1
@@ -166,19 +165,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   isDead: 0
---- !u!114 &2334184184601206535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334184184601206654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02b292a49e6f6e4b9e87958964f51d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6789932926883324989, guid: 26e83ec256ad1b04f9549bcf4b349484, type: 3}
 --- !u!114 &2334184184601206534
 MonoBehaviour:
   m_ObjectHideFlags: 0
