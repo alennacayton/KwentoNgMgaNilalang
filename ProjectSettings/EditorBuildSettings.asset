@@ -12,9 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 229df2659d5194543ab87d7a393c0fb4
   - enabled: 1
-    path: Assets/Scenes/RoomContent.unity
+    path: Assets/Scenes/AreaOne.unity
     guid: d4c110ea10cf3d942ba9f9b3abb75546
   - enabled: 1
     path: Assets/Scenes/AswangCombat.unity
     guid: e2dc8f273bac41c46a52453797d12d41
+  - enabled: 1
+    path: Assets/Scenes/AreaFour.unity
+    guid: 0bb1d04050b9c1a4391c07619a63f324
+  - enabled: 1
+    path: Assets/Scenes/AreaThree.unity
+    guid: df62f2eb9f4e3e04496598417b21f270
+  - enabled: 1
+    path: Assets/Scenes/AreaTwo.unity
+    guid: d388c5b3c8a12fa4a8daf31b77624712
+  - enabled: 1
+    path: Assets/Scenes/BungisngisCombat.unity
+    guid: 51cae88c665d70e4fb4ecad5980e329f
+  - enabled: 1
+    path: Assets/Scenes/DiwataCombat.unity
+    guid: 438645e684f9c9348b1da301b02b047b
+  - enabled: 1
+    path: Assets/Scenes/PugotCombat.unity
+    guid: 4ae877a98f1cf8a4f87b25b0a3e85039
   m_configObjects: {}

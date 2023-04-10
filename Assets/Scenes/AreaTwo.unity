@@ -361,6 +361,9 @@ MonoBehaviour:
   creatureRoom: {fileID: 2280236548925380396, guid: 9916b7bebab76ae43a74329ca8cba925, type: 3}
   npcRoom: {fileID: 2847524656706069892, guid: 73fafdb1bb8d36144a673b11529aae2e, type: 3}
   questRoom: {fileID: -5952130733250582606, guid: 49de161fde7647f4fb3bcded18f91255, type: 3}
+  diwataRoom: {fileID: 5591237307856845597, guid: 33d9b40854f30f64a82395413bb97e96, type: 3}
+  bungisngisRoom: {fileID: 1134247620552251362, guid: 0570b98aeb980fd428382b62b85947cd, type: 3}
+  pugotRoom: {fileID: 7549416169046286972, guid: 7f110528fa06b234b819cf095bb61b5f, type: 3}
   graphTest: {fileID: 826419577}
   itemParent: {fileID: 1607766029}
   cinemachineCamera: {fileID: 1792208467}

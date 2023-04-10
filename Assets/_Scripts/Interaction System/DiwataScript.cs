@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class AswangScript : MonoBehaviour
+public class DiwataScript : MonoBehaviour
 {
 
     public bool isInRange;
@@ -31,9 +31,9 @@ public class AswangScript : MonoBehaviour
         myImage = myObject.GetComponent<Image>();
         aswangText = myObjectText.GetComponent<Text>();
 
-        
 
- 
+
+
     }
 
     // Update is called once per frame
@@ -41,11 +41,10 @@ public class AswangScript : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(interactKey))
         {
-            Debug.Log("RAWR");
 
 
             myImage.enabled = true;
-            aswangText.text = "*eerie, flapping noise*";
+            aswangText.text = "Kumusta?";
             aswangText.enabled = true;
 
 
@@ -64,7 +63,7 @@ public class AswangScript : MonoBehaviour
         myImage.enabled = false;
         aswangText.enabled = false;
 
-        SceneManager.LoadScene("AswangCombat");
+        SceneManager.LoadScene("DiwataCombat");
     }
 
 

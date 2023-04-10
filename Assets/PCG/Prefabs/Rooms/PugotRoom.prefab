@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2082927744703743779}
-  - component: {fileID: 2280236548925380396}
+  - component: {fileID: 7549416169046286972}
   m_Layer: 0
-  m_Name: CreatureRoom
+  m_Name: PugotRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2280236548925380396
+--- !u!114 &7549416169046286972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,15 +48,15 @@ MonoBehaviour:
   objectPlacementData:
   - minQuantity: 1
     maxQuantity: 1
-    objectPrefab: {fileID: 6389587811116226607, guid: fa4363c527108a546a6da2a265cf8edd, type: 3}
+    objectPrefab: {fileID: 7248076698864022724, guid: db7393aa6df14c14997411cb96d9c4ec, type: 3}
     objectSize: {x: 1, y: 1}
   itemData:
   - minQuantity: 1
     maxQuantity: 1
     objectData: {fileID: 11400000, guid: d48048e52ccd7fa45b657a434b277102, type: 2}
   - minQuantity: 2
-    maxQuantity: 4
-    objectData: {fileID: 11400000, guid: ff1b0ca5b1c362d44b72b6ded99ddcae, type: 2}
-  - minQuantity: 2
-    maxQuantity: 4
+    maxQuantity: 3
     objectData: {fileID: 11400000, guid: f42e9114019933d4cbe2ee1cf58e5165, type: 2}
+  - minQuantity: 2
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: ff1b0ca5b1c362d44b72b6ded99ddcae, type: 2}

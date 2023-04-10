@@ -412,7 +412,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1265022472}
         m_TargetAssemblyTypeName: CombatLoading, NewAssembly
-        m_MethodName: ProceedtoLevelThree
+        m_MethodName: FinishGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1758,11 +1758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8591515
+      value: 2.3064632
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.8591515
+      value: 2.2354436
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalScale.z
@@ -1770,11 +1770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.04
+      value: 2.32
       objectReference: {fileID: 0}
     - target: {fileID: 6346871626000873688, guid: 84afc4afc7c0cf64d97f4fd458c86870, type: 3}
       propertyPath: m_LocalPosition.z

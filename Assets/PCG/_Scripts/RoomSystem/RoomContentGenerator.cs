@@ -5,11 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class RoomContentGenerator : MonoBehaviour
 {
     [SerializeField]
-    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom, questRoom;
+    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom, questRoom, diwataRoom, bungisngisRoom, pugotRoom;
 
     List<GameObject> spawnedObjects = new List<GameObject>();
 
@@ -28,22 +29,7 @@ public class RoomContentGenerator : MonoBehaviour
 
     public void GenerateRoomContent(DungeonData dungeonData)
     {
-        /*
-        // Debug
-        foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
-        {
-            Debug.Log("ROOM Key: " + roomData.Key);
-
-            foreach (var val in roomData.Value)
-            {
-
-                Debug.Log(val + "\n");
-            }
-
-        }
-        Debug.Log(dungeonData.roomsDictionary.Count);
-        */
-
+      
         foreach (GameObject item in spawnedObjects)
         {
             DestroyImmediate(item);
@@ -198,12 +184,42 @@ public class RoomContentGenerator : MonoBehaviour
 
         Debug.Log("=========================================================   BOSS ROOM KEY " + bossRoomKey + " =========================================================");
 
-        spawnedObjects.AddRange(
-          creatureRoom.ProcessRoom(
-              bossRoomKey,
-              bossRoomValues,
-              dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
-         );
+
+        if (SceneManager.GetActiveScene().name.Equals("AreaOne")){
+            spawnedObjects.AddRange(
+             creatureRoom.ProcessRoom(
+                 bossRoomKey,
+                 bossRoomValues,
+                 dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
+            );
+        } else if (SceneManager.GetActiveScene().name.Equals("AreaTwo"))
+        {
+            spawnedObjects.AddRange(
+            diwataRoom.ProcessRoom(
+                bossRoomKey,
+                bossRoomValues,
+                dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
+           );
+        } else if (SceneManager.GetActiveScene().name.Equals("AreaThree"))
+        {
+            spawnedObjects.AddRange(
+            pugotRoom.ProcessRoom(
+                bossRoomKey,
+                bossRoomValues,
+                dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
+           );
+        } else if (SceneManager.GetActiveScene().name.Equals("AreaFour"))
+        {
+            spawnedObjects.AddRange(
+               bungisngisRoom.ProcessRoom(
+                   bossRoomKey,
+                   bossRoomValues,
+                   dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
+              );
+        }
+
+
+   
 
 
         // remove room from list
