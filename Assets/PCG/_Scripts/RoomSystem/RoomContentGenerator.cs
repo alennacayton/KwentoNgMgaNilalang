@@ -26,17 +26,6 @@ public class RoomContentGenerator : MonoBehaviour
 
     public Vector2Int playerSpawn = new Vector2Int(0, 0);
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            foreach (var item in spawnedObjects)
-            {
-                Destroy(item);
-            }
-            RegenerateDungeon?.Invoke();
-        }
-    }
     public void GenerateRoomContent(DungeonData dungeonData)
     {
         /*
