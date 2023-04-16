@@ -48,7 +48,7 @@ public class RoomContentGenerator : MonoBehaviour
                 item.transform.SetParent(itemParent, false);
         }
 
-        FindObjectOfType<InventoryGenerator>().Initialize();
+        //FindObjectOfType<InventoryGenerator>().Initialize();
     }
 
     // Selects random room as player spawn point

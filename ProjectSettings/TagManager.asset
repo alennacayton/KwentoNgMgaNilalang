@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ItemPrefab
+  - Object
+  - Inventory
   layers:
   - Default
   - TransparentFX
