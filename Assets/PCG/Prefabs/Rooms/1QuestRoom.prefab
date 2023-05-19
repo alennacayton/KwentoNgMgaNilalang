@@ -45,5 +45,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabPlacer: {fileID: 4341242197028722173, guid: 49d1de73f44f58940a43bf538b290285, type: 3}
-  objectPlacementData: []
-  itemData: []
+  objectPlacementData:
+  - minQuantity: 1
+    maxQuantity: 1
+    objectPrefab: {fileID: 435280441804084782, guid: 2d7f802084b26aa4f9d4a73e99ab481a, type: 3}
+    objectSize: {x: 1, y: 1}
+  itemData:
+  - minQuantity: 1
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: 124889a69df83b440b2623ba5b5d5b0e, type: 2}
+  - minQuantity: 2
+    maxQuantity: 4
+    objectData: {fileID: 11400000, guid: ff1b0ca5b1c362d44b72b6ded99ddcae, type: 2}
+  - minQuantity: 1
+    maxQuantity: 4
+    objectData: {fileID: 11400000, guid: 70bb79b25760ec54d8a3c2f4d30fbde2, type: 2}
+  - minQuantity: 2
+    maxQuantity: 4
+    objectData: {fileID: 11400000, guid: 5f3d5b8de05ac3e4abb6fd4d3eab4aed, type: 2}
+  - minQuantity: 1
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: d33f6fea7db47904a997959b7bdf3e4c, type: 2}
+  - minQuantity: 2
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: a86781740217fdd478a31e4e6e5cba42, type: 2}
+  - minQuantity: 2
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: 3ec8c312e525998498bffb23d19f9154, type: 2}
