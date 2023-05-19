@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class RoomContentGenerator : MonoBehaviour
 {
     [SerializeField]
-    private RoomGenerator playerRoom, defaultRoom, creatureRoom, npcRoom, questRoom, diwataRoom, bungisngisRoom, pugotRoom;
+    private RoomGenerator playerRoom, defaultRoom, creatureRoom, questRoom, diwataRoom, bungisngisRoom, pugotRoom;
 
     List<GameObject> spawnedObjects = new List<GameObject>();
 
@@ -38,7 +38,6 @@ public class RoomContentGenerator : MonoBehaviour
 
         SelectPlayerSpawnPoint(dungeonData);
         SelectBossSpawnPoint(dungeonData);
-        SelectNPCSpawnPoint(dungeonData);
         SelectQuestRooms(dungeonData);
         SelectEnemySpawnPoints(dungeonData);
 
@@ -93,50 +92,7 @@ public class RoomContentGenerator : MonoBehaviour
     {
 
         checkRoomsEmpty(dungeonData);
-        /*
-
-
-        // ================================= USING DISTANCE BETWEEN POINTS =================================================
-
-        float maxDistance = 0;
-        Vector2Int highest = new Vector2Int(0, 0);
-
-        HashSet<Vector2Int> highestRoomValues = new HashSet<Vector2Int>();
-
-        foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
-        {
-            Debug.Log( "DISTANCE ======================================================================================================== " + Vector2.Distance(playerSpawn, roomData.Key) + " KEY  " + roomData.Key);
-             // center of room
-
-            if(Vector2.Distance(playerSpawn, roomData.Key) > maxDistance)
-            {
-                maxDistance = Vector2.Distance(playerSpawn, roomData.Key);
-                highest = roomData.Key;
-            }
-
-        }
-
-
-        foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
-        {
-            if (roomData.Key.Equals(highest))
-            {
-                highestRoomValues = roomData.Value;
-            }
-        }
-
-        spawnedObjects.AddRange(
-         creatureRoom.ProcessRoom(
-             highest,
-             highestRoomValues,
-             dungeonData.GetRoomFloorWithoutCorridors(highest))
-        );
-
-
-        dungeonData.roomsDictionary.Remove(highest);
-
-
-        */
+   
 
 
         // ================================= USING DIJKSTRA ALGO =================================================
@@ -250,29 +206,6 @@ public class RoomContentGenerator : MonoBehaviour
         return true;
     }
 
-    private void SelectNPCSpawnPoint(DungeonData dungeonData)
-    {
-        checkRoomsEmpty(dungeonData);
-
-        int randomRoomIndex = UnityEngine.Random.Range(0, dungeonData.roomsDictionary.Count);
-        Vector2Int npcSpawnPoint = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
-
-        Vector2Int roomIndex = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
-
-
-
-        // creating npc room
-        List<GameObject> placedPrefabs = npcRoom.ProcessRoom(
-            npcSpawnPoint,
-            dungeonData.roomsDictionary.Values.ElementAt(randomRoomIndex),
-            dungeonData.GetRoomFloorWithoutCorridors(roomIndex)
-            );
-
-        spawnedObjects.AddRange(placedPrefabs);
-
-        dungeonData.roomsDictionary.Remove(npcSpawnPoint);
-
-    }
 
 
     private void SelectQuestRooms(DungeonData dungeonData)

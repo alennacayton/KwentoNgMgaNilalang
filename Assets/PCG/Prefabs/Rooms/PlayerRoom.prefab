@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2334184184601206654, guid: bfdae5ea0a2bf4f4ba045235b0f22eb0, type: 3}
   objectData:
-  - minQuantity: 3
-    maxQuantity: 5
+  - minQuantity: 2
+    maxQuantity: 4
     objectData: {fileID: 11400000, guid: f42e9114019933d4cbe2ee1cf58e5165, type: 2}
   - minQuantity: 2
     maxQuantity: 4
@@ -64,4 +64,9 @@ MonoBehaviour:
   - minQuantity: 2
     maxQuantity: 4
     objectData: {fileID: 11400000, guid: ff1b0ca5b1c362d44b72b6ded99ddcae, type: 2}
+  prefabPlacementData:
+  - minQuantity: 1
+    maxQuantity: 1
+    objectPrefab: {fileID: 4648661667295815093, guid: c9be0339f1cfd6b438a6e11cfdb7cdca, type: 3}
+    objectSize: {x: 1, y: 1}
   prefabPlacer: {fileID: 4341242197028722173, guid: 49d1de73f44f58940a43bf538b290285, type: 3}

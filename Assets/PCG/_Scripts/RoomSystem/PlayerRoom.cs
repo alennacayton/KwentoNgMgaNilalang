@@ -9,6 +9,7 @@ public class PlayerRoom : RoomGenerator
     public GameObject player;
 
     public List<ObjectPlacementData> objectData;
+    public List<PrefabPlacementData> prefabPlacementData;
 
     [SerializeField]
     private PrefabPlacer prefabPlacer;
@@ -29,9 +30,14 @@ public class PlayerRoom : RoomGenerator
 
         GameObject playerObject 
             = prefabPlacer.CreateObject(player, playerSpawnPoint + new Vector2(0.5f, 0.5f));
- 
+
+        placedObjects.AddRange(prefabPlacer.PlaceInteractableObject(prefabPlacementData, itemPlacementHelper));
+
+
+
         placedObjects.Add(playerObject);
 
+        
         return placedObjects;
     }
 }
