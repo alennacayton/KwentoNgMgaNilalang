@@ -7,6 +7,7 @@ TagManager:
   - ItemPrefab
   - Object
   - Inventory
+  - Slot
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,9 @@ public class InventoryGenerator : MonoBehaviour
     private void SetPlayerInventory()
     {
         PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
-        playerInventory.AddItemsToInventory(allItems);
+
+        foreach(Item item in allItems)
+            playerInventory.AddItemToInventory(item);
     }
 
     private void SetEnemyInventories()

@@ -18,6 +18,8 @@ public class ChestScript : MonoBehaviour
     private Image noteImg;
     private Text noteTxt;
 
+    
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -48,14 +50,14 @@ public class ChestScript : MonoBehaviour
             if (isOpen)
             {
                 spriteRenderer.sprite = chestOpen;
-                Debug.Log("Chest has been opened!!");
+                //Debug.Log("Chest has been opened!!");
                 noteImg.enabled = true;
                 noteTxt.enabled = true;
             }
             else
             {
                 spriteRenderer.sprite = chestClosed;
-                Debug.Log("Chest has been closed!!");
+                //Debug.Log("Chest has been closed!!");
                 noteImg.enabled = false;
                 noteTxt.enabled = false;
             }

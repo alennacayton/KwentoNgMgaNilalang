@@ -16,9 +16,13 @@ public class ObjectInventory : MonoBehaviour
     {
         PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
 
-        playerInventory.AddItemsToInventory(inventoryItems);
+        if(inventoryItems.Count > 0)
+        {
+            foreach (Item item in inventoryItems)
+                playerInventory.AddItemToInventory(item);
 
-        inventoryItems.Clear();
+            inventoryItems.Clear();
+        }
     }
 
 }
