@@ -18,9 +18,9 @@ public class CombatSystem : MonoBehaviour
 
     public BattleState state;
 
-    void start()
+    void Start()
     {
-        state = BattleState START; 
+        state = BattleState.START; 
         SetupBattle();
     }
 

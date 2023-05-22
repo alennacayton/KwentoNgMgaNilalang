@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitData : MonoBehaviour
+public class Unit : MonoBehaviour
 {
 
     public string unitName;
     public int maxHP;
     public int currentHP;
-
 }
