@@ -50,6 +50,7 @@ MonoBehaviour:
   interactKey: 101
   chestClosed: {fileID: -605971669510801958, guid: 59010b57e7642e24b8b581d9f7c75a31, type: 3}
   chestOpen: {fileID: -2415463959764788417, guid: 59010b57e7642e24b8b581d9f7c75a31, type: 3}
+  item: {fileID: 11400000, guid: 1576ac2484f2c0e4fa4765996a350ae6, type: 2}
 --- !u!58 &8319165327641946123
 CircleCollider2D:
   m_ObjectHideFlags: 0

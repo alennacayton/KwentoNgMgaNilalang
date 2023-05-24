@@ -20,8 +20,11 @@ public class PlayerInventory : MonoBehaviour
 
     public Item GetInventoryItemAtIndex(int index)
     {
-        if(index >= inventoryItems.Count)
-            return null;
         return inventoryItems[index];
+    }
+
+    public int GetInventoryCapacity()
+    {
+        return inventoryItems.Count;
     }
 }

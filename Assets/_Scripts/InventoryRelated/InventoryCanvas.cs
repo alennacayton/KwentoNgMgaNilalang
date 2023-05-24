@@ -7,6 +7,8 @@ public class InventoryCanvas : MonoBehaviour
 
     List<Slot> itemSlots = new List<Slot>();
     PlayerInventory playerInventory;
+    Item toAdd;
+
     private void Awake()
     {
         itemSlots.AddRange(GetComponentsInChildren<Slot>());
@@ -16,14 +18,10 @@ public class InventoryCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Item toAdd;
-
-        for(int i = 0; i < itemSlots.Count; i++)
+        for(int i = 0; i < playerInventory.GetInventoryCapacity(); i++)
         {
             toAdd = playerInventory.GetInventoryItemAtIndex(i);
-
-            if (toAdd != null)
-                itemSlots[i].AddItem(toAdd);
+            itemSlots[i].AddItem(toAdd);
         }
     }
 }

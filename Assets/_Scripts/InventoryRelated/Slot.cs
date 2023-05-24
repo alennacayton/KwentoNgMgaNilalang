@@ -20,6 +20,7 @@ public class Slot : MonoBehaviour
     public void AddItem(Item item)
     {
         currentItem = item;
+       
         currentItemDisplay.sprite = item.itemSprite;
         currentItemDisplay.enabled = true;
     }
@@ -27,7 +28,7 @@ public class Slot : MonoBehaviour
     public void RemoveItem()
     {
         currentItemDisplay.enabled = false;
+        currentItemDisplay.sprite = null;
         currentItem = null;
-        currentItemDisplay = null;
     }
 }

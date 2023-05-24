@@ -6,24 +6,26 @@ using UnityEngine.UI;
 public class ChestScript : MonoBehaviour
 {
     private bool isInRange;
-    private bool isOpen;
+    private bool isOpened;
 
     [SerializeField] private float triggerRadius = 1.5f;
     [SerializeField] private KeyCode interactKey;
     [SerializeField] private Sprite chestClosed;
     [SerializeField] private Sprite chestOpen;
+    [SerializeField] private Item item;
 
     private SpriteRenderer spriteRenderer;
 
     private Image noteImg;
     private Text noteTxt;
 
+    private PlayerInventory playerInventory;
     
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
-        isOpen = false;
+        isOpened = false;
         isInRange = false;
         interactKey = KeyCode.E;
         GetComponent<CircleCollider2D>().radius = triggerRadius;
@@ -38,32 +40,23 @@ public class ChestScript : MonoBehaviour
         // Get a reference to the Image component on the GameObject
         noteImg = myObject.GetComponent<Image>();
         noteTxt = myObjectText.GetComponent<Text>();
+
+        playerInventory = FindObjectOfType<PlayerInventory>();
     }
 
     private void Update()
     {
-        if (isInRange && Input.GetKeyDown(interactKey))
+        if (isInRange && Input.GetKeyDown(interactKey) && !isOpened)
         {
-            //Debug.Log("Item has been interacted with!!!");
-            isOpen = !isOpen;
+            isOpened = true;
+            spriteRenderer.sprite = chestOpen;
 
-            if (isOpen)
+            if(item != null)
             {
-                spriteRenderer.sprite = chestOpen;
-                //Debug.Log("Chest has been opened!!");
-                noteImg.enabled = true;
-                noteTxt.enabled = true;
-            }
-            else
-            {
-                spriteRenderer.sprite = chestClosed;
-                //Debug.Log("Chest has been closed!!");
-                noteImg.enabled = false;
-                noteTxt.enabled = false;
+                playerInventory.AddItemToInventory(item);
+                item = null;
             }
         }
-
-
     }
 
     // Update is called once per frame
