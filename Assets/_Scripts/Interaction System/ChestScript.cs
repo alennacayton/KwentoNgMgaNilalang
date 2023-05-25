@@ -18,7 +18,9 @@ public class ChestScript : MonoBehaviour
     private Image noteImg;
     private Text noteTxt;
 
-    
+    public Note note;
+
+
 
     // Start is called before the first frame update
     private void Start()
@@ -51,8 +53,14 @@ public class ChestScript : MonoBehaviour
             {
                 spriteRenderer.sprite = chestOpen;
                 //Debug.Log("Chest has been opened!!");
+
+                noteTxt.text = note.message;
                 noteImg.enabled = true;
                 noteTxt.enabled = true;
+
+                Debug.Log("Note Title: " + note.title);
+                Debug.Log("Note Message: " + note.message);
+
             }
             else
             {
@@ -64,6 +72,11 @@ public class ChestScript : MonoBehaviour
         }
 
 
+    }
+
+    public void SetNoteObject(Note noteObject)
+    {
+        note = noteObject;
     }
 
     // Update is called once per frame

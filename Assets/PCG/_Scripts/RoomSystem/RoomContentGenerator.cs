@@ -35,6 +35,7 @@ public class RoomContentGenerator : MonoBehaviour
             DestroyImmediate(item);
         }
         spawnedObjects.Clear();
+    
 
         SelectPlayerSpawnPoint(dungeonData);
         SelectBossSpawnPoint(dungeonData);
