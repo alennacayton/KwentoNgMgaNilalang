@@ -11,19 +11,14 @@ public class PrefabPlacer : MonoBehaviour
     private GameObject objectPrefab;
 
     [SerializeField]
-    private List<SceneNotes> sceneNotes; // List of SceneNotes objects for each scene
+    private List<SceneNotes> sceneNotes; 
 
-    private string currentSceneName; // Name of the current scene
-                                     // ...
+    private string currentSceneName; 
 
 
     private void Awake()
     {
-        // Initialization code here
-        // Setup references or perform other tasks
-
-        Debug.Log(" I AM AWAKE !!!!!!!!!!!!!!");
-
+    
         // Reset the tag values to 0
         foreach (var sceneNote in sceneNotes)
         {
@@ -37,29 +32,6 @@ public class PrefabPlacer : MonoBehaviour
         UnityEditor.AssetDatabase.SaveAssets();
     }
 
-
-    private void Start()
-    {
-        currentSceneName = SceneManager.GetActiveScene().name;
-        Debug.Log("SCENE NAME " + currentSceneName);
-
-
-        if (sceneNotes == null)
-        {
-            Debug.Log("SCENE NOTES IS NULL AYOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-        }
-        else
-        {
-            Debug.Log("Scene notes not empty bro it has like " + sceneNotes.Count + " info");
-
-            Debug.Log("Scene notes not empty bro it has like " + sceneNotes[0].notes[1]);
-        }
-
-
-
-
-
-    }
 
 
     public List<GameObject> PlaceInteractableObject(List<PrefabPlacementData> objectPlacementData, ObjectPlacementHelper itemPlacementHelper)
@@ -135,34 +107,19 @@ public class PrefabPlacer : MonoBehaviour
         GameObject newItem = null;
         if (Application.isPlaying)
         {
-            Debug.Log("=====================================PREFAB === " + prefab.name);
 
-            Debug.Log("Scene notes not empty bro it has like " + sceneNotes.Count + " info");
-
-            Debug.Log("dsadScene notes not empty bro it has like " + sceneNotes[0].notes[0]);
-
-            // Check if prefab is a Chest
 
             if (prefab.name == "Chest")
             {
-                Debug.Log("HEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY " + sceneNotes[0].notes[0]);
-
+              
                 SceneNotes sceneNote = sceneNotes.Find(x => x.sceneName == SceneManager.GetActiveScene().name);
-
-
 
                 if (sceneNote == null)
                 {
                     Debug.LogError("No SceneNotes found for scene: " + currentSceneName);
                 }
 
-
-
-
                 Debug.Log("Number of notes in SceneNotes: " + sceneNote.notes.Length);
-
-                // making a local copy
-               // Note[] notesToUse = sceneNote.notes;
 
 
                 // Generate the Chest prefab
@@ -170,13 +127,7 @@ public class PrefabPlacer : MonoBehaviour
 
                 ChestScript chestComponent = newChest.GetComponent<ChestScript>();
 
-                /* selecting a random note
-                int randomIndex = Random.Range(0, notesToUse.Length);
-                Note selectedNote = notesToUse[randomIndex];
-                notesToUse = notesToUse.Where(note => note != selectedNote).ToArray();
-
-                */
-
+       
                 Note selectedNote = null;
 
                 foreach (var note in sceneNote.notes)
@@ -194,19 +145,8 @@ public class PrefabPlacer : MonoBehaviour
                     Debug.Log("Note: " + note);
                 }
 
-            
-
-
                 chestComponent.SetNoteObject(selectedNote);
 
-
-
-                // Remove the selected note from the array
-
-
-                //List<Note> updatedNotes = new List<Note>(notesToUse);
-                //  updatedNotes.RemoveAt(randomIndex);
-                //   sceneNote.notes = updatedNotes.ToArray();
 
             }
             else
