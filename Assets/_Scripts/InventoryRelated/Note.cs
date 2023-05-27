@@ -19,7 +19,13 @@ public class Note : Item
 
     public override void Use()
     {
-        //FindObjectOfType<NoteText>().SetText(message);
+        NotePanel noteText = FindObjectOfType<NotePanel>();
+
+        noteText.SetText(message);
+        noteText.ShowNote();
+
+        FindObjectOfType<InventoryButtonManager>().ButtonPressed();
+
         Debug.Log("HELLO WORLD. THIS SLOT HAS BEEN USED \n");
     }
 }

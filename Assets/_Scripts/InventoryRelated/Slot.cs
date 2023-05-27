@@ -40,7 +40,6 @@ public class Slot : MonoBehaviour
         currentItem = null;
 
         button.enabled = false;
-        //button.onClick.AddListener(null);
     }
 
     public void UseItem()

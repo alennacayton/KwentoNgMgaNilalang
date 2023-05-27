@@ -9,14 +9,27 @@ public class InventoryButtonManager : MonoBehaviour
 
     void Awake()
     {
-        isOpen = false;
-        inventory.SetActive(isOpen);
+        CloseInventory();
     }
 
     public void ButtonPressed()
     {
-        isOpen = !isOpen;
-        inventory.SetActive(isOpen);
+        if (!isOpen)
+            OpenInventory();
+        else
+            CloseInventory();
+    }
+
+    void OpenInventory()
+    {
+        inventory.SetActive(true);
+        isOpen = true;
+    }
+
+    void CloseInventory()
+    {
+        inventory.SetActive(false);
+        isOpen = false;
     }
 
 

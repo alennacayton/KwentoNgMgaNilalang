@@ -15,10 +15,6 @@ public class ChestScript : MonoBehaviour
     [SerializeField] private Item item;
 
     private SpriteRenderer spriteRenderer;
-
-    private Image noteImg;
-    private Text noteTxt;
-
     private PlayerInventory playerInventory;
     
 
@@ -32,14 +28,6 @@ public class ChestScript : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = chestClosed;
-
-        // Get a reference to the GameObject
-        GameObject myObject = GameObject.Find("Note");
-        GameObject myObjectText = GameObject.Find("NoteText");
-
-        // Get a reference to the Image component on the GameObject
-        noteImg = myObject.GetComponent<Image>();
-        noteTxt = myObjectText.GetComponent<Text>();
 
         playerInventory = FindObjectOfType<PlayerInventory>();
     }
@@ -70,9 +58,6 @@ public class ChestScript : MonoBehaviour
     {
         //Debug.Log("Item is Out of Range");
         isInRange = false;
-
-        noteImg.enabled = false;
-        noteTxt.enabled = false;
     }
 
 
