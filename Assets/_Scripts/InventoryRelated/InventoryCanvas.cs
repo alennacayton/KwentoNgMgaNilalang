@@ -16,7 +16,7 @@ public class InventoryCanvas : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdateInventory()
     {
         for(int i = 0; i < playerInventory.GetInventoryCapacity(); i++)
         {

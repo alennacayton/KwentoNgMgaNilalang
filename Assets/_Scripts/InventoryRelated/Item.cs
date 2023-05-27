@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
-[CreateAssetMenu]
-public class Item : ScriptableObject
+
+public abstract class Item: ScriptableObject
 {
-    public Sprite itemSprite;
-    public string itemName;
+    public abstract Sprite itemSprite { get;  set; }
+    public abstract string itemName { get;  set; }
+    public abstract void Use();
 }

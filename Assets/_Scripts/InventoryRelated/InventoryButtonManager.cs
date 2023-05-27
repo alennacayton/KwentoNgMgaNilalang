@@ -5,7 +5,13 @@ public class InventoryButtonManager : MonoBehaviour
 {
 
     public GameObject inventory;
-    bool isOpen = false;
+    bool isOpen;
+
+    void Awake()
+    {
+        isOpen = false;
+        inventory.SetActive(isOpen);
+    }
 
     public void ButtonPressed()
     {

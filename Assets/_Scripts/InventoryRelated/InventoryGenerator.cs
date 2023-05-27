@@ -7,7 +7,7 @@ using static UnityEditor.Progress;
 public class InventoryGenerator : MonoBehaviour
 {
     [SerializeField] Transform roomsContent;
-    [SerializeField] List<Item> allItems;
+    [SerializeField] List<Note> allItems;
 
     public void Initialize()
     {
@@ -20,7 +20,7 @@ public class InventoryGenerator : MonoBehaviour
     {
         PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
 
-        foreach(Item item in allItems)
+        foreach(Note item in allItems)
             playerInventory.AddItemToInventory(item);
     }
 
