@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    Item currentItem;
     Image currentItemDisplay;
     Button button;
+
     [SerializeField] int slotIndex;
+    [SerializeField] Item currentItem;
 
     public void Awake()
     {
@@ -23,6 +24,8 @@ public class Slot : MonoBehaviour
 
     public void AddItem(Item item)
     {
+        RemoveItem();
+
         currentItem = item;
        
         currentItemDisplay.sprite = item.itemSprite;
@@ -40,11 +43,14 @@ public class Slot : MonoBehaviour
         currentItem = null;
 
         button.enabled = false;
+        button.onClick.RemoveListener(UseItem);
     }
 
     public void UseItem()
     {
         currentItem.Use();
+        //RemoveItem();
+        //FindObjectOfType<PlayerInventory>().RemoveItemFromInventory(slotIndex);
     }
 
 }
