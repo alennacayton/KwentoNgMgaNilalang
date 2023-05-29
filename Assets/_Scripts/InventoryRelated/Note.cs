@@ -20,6 +20,8 @@ public class Note : Item
         get => tag;
         set => tag = value;
     }
+   
+    public override string itemMessage { set => message = value; get { return message; } }
     public override Sprite itemSprite { set => sprite = value; get { return sprite; } }
     public override string itemName { set => nameOfItem = value; get { return nameOfItem;  } }
 

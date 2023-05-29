@@ -39,11 +39,18 @@ public class ChestScript : MonoBehaviour
             isOpened = true;
             spriteRenderer.sprite = chestOpen;
 
-            if(item != null)
-            {
+            NotePanel noteText = FindObjectOfType<NotePanel>();
+            noteText.SetText(item.itemMessage);
+            Debug.Log("Item Message : " + item.itemMessage);
+            noteText.ShowNote();
+
+            if (item != null)
+            {  
                 playerInventory.AddItemToInventory(item);
                 item = null;
             }
+
+
         }
     }
 
