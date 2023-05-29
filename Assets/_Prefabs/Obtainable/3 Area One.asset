@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ffc399aba05e964d8cc17363ade1a0d, type: 3}
-  m_Name: Area One Note
+  m_Name: 3 Area One
   m_EditorClassIdentifier: 
   sprite: {fileID: -627027647, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   nameOfItem: Area One Note
-  message: They crave for human organs like heart and livers, fresh blood, fetus,
-    or dead people. Their favorite prey are those who are pregnant.
+  message: It sucks the blood out of its sleeping victims at night
+  tag: 1

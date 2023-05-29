@@ -3,11 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PrefabPlacer : MonoBehaviour
 {
     [SerializeField]
     private GameObject objectPrefab;
+
+    [SerializeField]
+    private List<SceneNotes> sceneNotes; // List of SceneNotes objects for each scene
+
+
+    private void Awake()
+    {
+      
+        // Reset the tag values to 0
+        foreach (var sceneNote in sceneNotes)
+        {
+            foreach (var note in sceneNote.notes)
+            {
+                note.Tag = 0;
+                UnityEditor.EditorUtility.SetDirty(note);
+            }
+        }
+
+        UnityEditor.AssetDatabase.SaveAssets();
+
+        
+    }
 
     public List<GameObject> PlaceInteractableObject(List<PrefabPlacementData> objectPlacementData, ObjectPlacementHelper itemPlacementHelper)
     {
@@ -70,18 +93,61 @@ public class PrefabPlacer : MonoBehaviour
 
     public GameObject CreateObject(GameObject prefab, Vector3 placementPosition)
     {
+
         if (prefab == null)
             return null;
-        GameObject newItem;
+        GameObject newItem = null;
         if (Application.isPlaying)
         {
-            newItem = Instantiate(prefab, placementPosition, Quaternion.identity);
+
+            // Check if prefab is a Chest
+
+            if (prefab.name == "Chest")
+            {
+
+                SceneNotes sceneNote = sceneNotes.Find(x => x.sceneName == SceneManager.GetActiveScene().name);
+
+                if (sceneNote == null)
+                {
+                    Debug.LogError("No SceneNotes found for scene: " + SceneManager.GetActiveScene().name);
+                }
+
+
+                // Generate the Chest prefab
+                GameObject newChest = Instantiate(prefab, placementPosition, Quaternion.identity);
+
+                ChestScript chestComponent = newChest.GetComponent<ChestScript>();
+
+                Note selectedNote = null;
+
+                foreach (var note in sceneNote.notes)
+                {
+                    if (note.Tag == 0)
+                    {
+                        selectedNote = note;
+
+                        note.Tag = 1;
+
+                        UnityEditor.EditorUtility.SetDirty(note);
+                        UnityEditor.AssetDatabase.SaveAssets();
+                        break;
+                    }
+                    Debug.Log("Note: " + note);
+                }
+
+                chestComponent.SetNoteObject(selectedNote);
+
+
+            }
+            else
+            {
+                newItem = Instantiate(prefab, placementPosition, Quaternion.identity);
+            }
+
+
         }
         else
         {
-         //   newItem = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
-         //   newItem.transform.position = placementPosition;
-         //   newItem.transform.rotation = Quaternion.identity;
 
             newItem = Instantiate(prefab, placementPosition, Quaternion.identity);
         }
@@ -90,4 +156,10 @@ public class PrefabPlacer : MonoBehaviour
 
         return newItem;
     }
+}
+[System.Serializable]
+public class SceneNotes
+{
+    public string sceneName;
+    public Note[] notes;
 }

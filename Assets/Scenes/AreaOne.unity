@@ -1597,6 +1597,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590690787}
   m_CullTransparentMesh: 1
+--- !u!1 &656599149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656599151}
+  - component: {fileID: 656599150}
+  m_Layer: 0
+  m_Name: PrefabPlacer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &656599150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656599149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b3a3d5c4cc892489219f65bbacb475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 3293408477025586303, guid: a2239687eba4d4b428373fc0909638d7, type: 3}
+  sceneNotes:
+  - sceneName: AreaOne
+    notes:
+    - {fileID: 11400000, guid: 24aaacf918d013842951e299857c2d3d, type: 2}
+    - {fileID: 11400000, guid: b2fbc0a84a77b37449dde4ecf6289883, type: 2}
+    - {fileID: 11400000, guid: 82a63dc5c1a7a724aadf5ed2b8be1e24, type: 2}
+  - sceneName: AreaTwo
+    notes:
+    - {fileID: 11400000, guid: a5180c66820b131449a758078554d772, type: 2}
+    - {fileID: 11400000, guid: 139720e990d84e3439c42d12dd0921dc, type: 2}
+    - {fileID: 11400000, guid: fefe67043cac97943a75e01d889d6adf, type: 2}
+  - sceneName: AreaThree
+    notes:
+    - {fileID: 11400000, guid: f38f844ee37dc344383f68b8da1022f4, type: 2}
+    - {fileID: 11400000, guid: a452891d39a8e1544994b05c5c590c7e, type: 2}
+    - {fileID: 11400000, guid: 370fd241b4225ef42ad6d84556319273, type: 2}
+  - sceneName: AreaFour
+    notes:
+    - {fileID: 11400000, guid: 53e814578c6183b468dc7c0b5ca9ded6, type: 2}
+    - {fileID: 11400000, guid: 5b60f52e8d1aa40449b3e808031fbf73, type: 2}
+    - {fileID: 11400000, guid: b2bf91b5cc2a22e4b994b43ab179ed54, type: 2}
+--- !u!4 &656599151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656599149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.325825, y: -75.89857, z: -0.6713358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &709312580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,6 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 9
+  currentItem: {fileID: 0}
 --- !u!114 &795896366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2216,6 +2283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 2
+  currentItem: {fileID: 0}
 --- !u!114 &831345691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,6 +2429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 10
+  currentItem: {fileID: 0}
 --- !u!114 &890252086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2995,6 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 0
+  currentItem: {fileID: 0}
 --- !u!114 &1085302976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,6 +3286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 1
+  currentItem: {fileID: 0}
 --- !u!114 &1100295482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3406,6 +3477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 6
+  currentItem: {fileID: 0}
 --- !u!114 &1232407396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,6 +3805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 8
+  currentItem: {fileID: 0}
 --- !u!114 &1265163987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4055,6 +4128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 3
+  currentItem: {fileID: 0}
 --- !u!114 &1368530910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27887,6 +27961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 5
+  currentItem: {fileID: 0}
 --- !u!114 &1710756223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28032,6 +28107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 4
+  currentItem: {fileID: 0}
 --- !u!114 &1760243114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28480,6 +28556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 11
+  currentItem: {fileID: 0}
 --- !u!114 &1839955877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28751,6 +28828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIndex: 7
+  currentItem: {fileID: 0}
 --- !u!114 &2106125953
 MonoBehaviour:
   m_ObjectHideFlags: 0

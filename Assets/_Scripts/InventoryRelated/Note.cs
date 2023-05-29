@@ -13,7 +13,13 @@ public class Note : Item
 
     [TextArea(20,20)]
     [SerializeField] string message;
+    [SerializeField] private int tag;
 
+    public int Tag
+    {
+        get => tag;
+        set => tag = value;
+    }
     public override Sprite itemSprite { set => sprite = value; get { return sprite; } }
     public override string itemName { set => nameOfItem = value; get { return nameOfItem;  } }
 

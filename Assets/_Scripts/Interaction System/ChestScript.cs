@@ -47,6 +47,12 @@ public class ChestScript : MonoBehaviour
         }
     }
 
+
+    public void SetNoteObject(Item note)
+    {
+        item = note;
+    }
+
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
