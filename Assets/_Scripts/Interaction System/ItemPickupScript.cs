@@ -44,12 +44,15 @@ public class ItemPickupScript : MonoBehaviour
                 playerInventory.AddItemToInventory(item);
                 item = null;
             }
+<<<<<<< HEAD:Assets/_Scripts/Interaction System/ItemPickupScript.cs
 
             if (isChest)
                 spriteRenderer.sprite = sprite2;
             else Destroy(gameObject);
 
 
+=======
+>>>>>>> parent of 5c132c8 (Displays note when chest is clicked):Assets/_Scripts/Interaction System/ChestScript.cs
         }
     }
 
