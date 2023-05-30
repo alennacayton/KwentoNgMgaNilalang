@@ -43,17 +43,5 @@ public class Object : MonoBehaviour
         if (itemData.OnInteract != null)
             this.OnInteract = itemData.OnInteract;
     }
-
-
-
-
-
-    public void TransferItems()
-    {
-        ObjectInventory itemInventory = GetComponent<ObjectInventory>();
-        itemInventory.TransferItemsToPlayer();
-
-        Debug.Log("Transferred To Player");
-    }
 }
 

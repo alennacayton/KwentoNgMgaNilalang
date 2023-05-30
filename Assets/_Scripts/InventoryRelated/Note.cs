@@ -14,8 +14,9 @@ public class Note : Item
     [TextArea(20,20)]
     [SerializeField] string message;
 
-    public override Sprite itemSprite { set => sprite = value; get { return sprite; } }
-    public override string itemName { set => nameOfItem = value; get { return nameOfItem;  } }
+    public override Sprite itemSprite { get { return sprite; } set => sprite = value;  }
+    public override string itemName { get { return nameOfItem; } set => nameOfItem = value; }
+
 
     public override void Use()
     {
@@ -26,6 +27,6 @@ public class Note : Item
 
         FindObjectOfType<InventoryButtonManager>().ButtonPressed();
 
-        Debug.Log("HELLO WORLD. THIS SLOT HAS BEEN USED \n");
+        //Debug.Log("HELLO WORLD. THIS SLOT HAS BEEN USED \n");
     }
 }

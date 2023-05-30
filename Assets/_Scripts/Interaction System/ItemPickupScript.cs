@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChestScript : MonoBehaviour
+public class ItemPickupScript : MonoBehaviour
 {
     private bool isInRange;
-    private bool isOpened;
+    private bool isPickedUp;
 
     [SerializeField] private float triggerRadius = 1.5f;
     [SerializeField] private KeyCode interactKey;
-    [SerializeField] private Sprite chestClosed;
-    [SerializeField] private Sprite chestOpen;
+    [SerializeField] private Sprite sprite1;
+    [SerializeField] private Sprite sprite2;
     [SerializeField] private Item item;
+    [SerializeField] bool isChest;
 
     private SpriteRenderer spriteRenderer;
     private PlayerInventory playerInventory;
@@ -21,29 +22,34 @@ public class ChestScript : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        isOpened = false;
+        isPickedUp = false;
         isInRange = false;
         interactKey = KeyCode.E;
         GetComponent<CircleCollider2D>().radius = triggerRadius;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = chestClosed;
+        spriteRenderer.sprite = sprite1;
 
         playerInventory = FindObjectOfType<PlayerInventory>();
     }
 
     private void Update()
     {
-        if (isInRange && Input.GetKeyDown(interactKey) && !isOpened)
+        if (isInRange && Input.GetKeyDown(interactKey) && !isPickedUp)
         {
-            isOpened = true;
-            spriteRenderer.sprite = chestOpen;
+            isPickedUp = true;
 
             if(item != null)
             {
                 playerInventory.AddItemToInventory(item);
                 item = null;
             }
+
+            if (isChest)
+                spriteRenderer.sprite = sprite2;
+            else Destroy(gameObject);
+
+
         }
     }
 
