@@ -9,11 +9,15 @@ public class QuizManager : MonoBehaviour
     public List<QuestionsAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
+    
+    public GameObject quizPanel;
+    public GameObject goPanel;
 
     public Text questionTxt;
 
     private void start()
     {
+        goPanel.SetActive(false);
         generateQuestion();
     }
 
@@ -23,6 +27,16 @@ public class QuizManager : MonoBehaviour
         generateQuestion();
     }
 
+    public gameOver()
+    {
+        quizPanel.setActive(false);
+        goPanel.SetActive(true);
+    }
+
+    public void retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex)
+    }
     void setAnswers()
     {
         for (int i = 0; i < options.Length; i++)
@@ -39,10 +53,18 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
+        if(QnA.Count > 0)
+        {
         currentQuestion = Random.Range(0, QnA.Count);
 
         questionTxt.text = QnA[currentQuestion].question;
         setAnswers();
+        }
+        else
+        {
+            Debug.Log("Out of questions")
+            gameOver();
+        }
 
     }
 
