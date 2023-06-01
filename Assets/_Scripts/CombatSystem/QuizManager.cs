@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -27,26 +28,27 @@ public class QuizManager : MonoBehaviour
         generateQuestion();
     }
 
-    public gameOver()
+    public void gameOver()
     {
-        quizPanel.setActive(false);
+        quizPanel.SetActive(false);
         goPanel.SetActive(true);
     }
 
     public void retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex)
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     void setAnswers()
     {
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<AnswersScript>().isCorrect = false;
+            options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].answers[i];
 
             if(QnA[currentQuestion].correctAnswer == i+1)
             {
-                options[i].GetComponent<AnswersScript>().isCorrect = true;
+                options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
         }
     }
@@ -62,7 +64,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Out of questions")
+            Debug.Log("Out of questions.");
             gameOver();
         }
 
