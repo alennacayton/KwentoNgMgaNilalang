@@ -5,9 +5,9 @@ using static UnityEditor.Progress;
 
 public class ObjectInventory : MonoBehaviour
 {
-    public List<Note> inventoryItems = new List<Note>();
+    public List<NoteItem> inventoryItems = new List<NoteItem>();
 
-    public void AddItemsToInventory(List<Note> newItems)
+    public void AddItemsToInventory(List<NoteItem> newItems)
     {
         inventoryItems.AddRange(newItems);
     }
@@ -18,7 +18,7 @@ public class ObjectInventory : MonoBehaviour
 
         if(inventoryItems.Count > 0)
         {
-            foreach (Note item in inventoryItems)
+            foreach (NoteItem item in inventoryItems)
                 playerInventory.AddItemToInventory(item);
 
             inventoryItems.Clear();

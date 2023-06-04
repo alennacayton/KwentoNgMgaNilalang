@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-[CreateAssetMenu(menuName = "Note")]
-public class Note : Item
+[CreateAssetMenu(menuName = "Note Item")]
+public class NoteItem : Item
 {
 
     [SerializeField] Sprite sprite;

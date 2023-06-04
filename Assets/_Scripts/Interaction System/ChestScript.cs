@@ -23,7 +23,7 @@ public class ChestScript : MonoBehaviour
     {
         isOpened = false;
         isInRange = false;
-        interactKey = KeyCode.E;
+        interactKey = FindObjectOfType<GameManager>().interactKey;
         GetComponent<CircleCollider2D>().radius = triggerRadius;
 
         spriteRenderer = GetComponent<SpriteRenderer>();

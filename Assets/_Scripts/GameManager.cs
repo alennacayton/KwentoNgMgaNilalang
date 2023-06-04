@@ -5,16 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject note;
+    public KeyCode interactKey = KeyCode.E;
 
-    private Text noteText;
+    public KeyCode upKey = KeyCode.W;
+    public KeyCode downKey = KeyCode.S;
+    public KeyCode leftKey = KeyCode.A;
+    public KeyCode rightKey = KeyCode.D;
 
-    public void Awake()
-    {
-        noteText = GetComponentInChildren<Text>();
-    }
-    public void ShowNote(string text)
-    {
-
-    }
 }

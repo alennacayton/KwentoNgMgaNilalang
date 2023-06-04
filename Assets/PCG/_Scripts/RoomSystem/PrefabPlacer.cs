@@ -118,7 +118,7 @@ public class PrefabPlacer : MonoBehaviour
 
                 ChestScript chestComponent = newChest.GetComponent<ChestScript>();
 
-                Note selectedNote = null;
+                NoteItem selectedNote = null;
 
                 foreach (var note in sceneNote.notes)
                 {
@@ -161,5 +161,5 @@ public class PrefabPlacer : MonoBehaviour
 public class SceneNotes
 {
     public string sceneName;
-    public Note[] notes;
+    public NoteItem[] notes;
 }

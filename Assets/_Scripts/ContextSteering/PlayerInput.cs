@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class PlayerInput : MonoBehaviour
 {
-    [SerializeField] private KeyCode interactKey = KeyCode.E;
+    [SerializeField] private KeyCode interactKey;
 
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
     public UnityEvent OnAttack;
@@ -16,6 +16,10 @@ public class PlayerInput : MonoBehaviour
     //private InputActionReference movement, attack, pointerPosition;
     private Object currentlyInteractableObject;
 
+    private void Awake()
+    {
+        interactKey = FindObjectOfType<GameManager>().interactKey;
+    }
 
     private void Update()
     {

@@ -13,4 +13,6 @@ public class ObjectData : ScriptableObject
     public bool nonDestructible;
     public bool interactable;
     public UnityEvent OnInteract;
+
+    public Item pickupItem;
 }

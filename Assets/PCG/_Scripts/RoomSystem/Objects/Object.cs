@@ -24,9 +24,17 @@ public class Object : MonoBehaviour
     [SerializeField]
     public UnityEvent OnInteract;
 
+    [SerializeField] public KeyCode interactKey;
 
+    [SerializeField] Item pickupItem;
+
+    private void Awake()
+    {
+        interactKey = FindObjectOfType<GameManager>().interactKey; 
+    }
     public void Initialize(ObjectData itemData)
     {
+
         //set sprite
         spriteRenderer.sprite = itemData.sprite;
         //set sprite offset
@@ -34,26 +42,25 @@ public class Object : MonoBehaviour
         itemCollider.size = itemData.size;
         itemCollider.offset = spriteRenderer.transform.localPosition;
 
-        if (itemData.nonDestructible)
-            this.nonDestructible = true;
+        nonDestructible = itemData.nonDestructible;
+        interactable = itemData.interactable;
+        OnInteract = itemData.OnInteract;
+        pickupItem = itemData.pickupItem;
 
-        if (itemData.interactable)
-            this.interactable = true;
-
-        if (itemData.OnInteract != null)
-            this.OnInteract = itemData.OnInteract;
     }
 
-
-
-
-
-    public void TransferItems()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        ObjectInventory itemInventory = GetComponent<ObjectInventory>();
-        itemInventory.TransferItemsToPlayer();
+        if (Input.GetKeyDown(interactKey) && interactable){
+            PickUpItem();
+        }
+    }
 
-        Debug.Log("Transferred To Player");
+    public void PickUpItem()
+    {
+        PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
+        playerInventory.AddItemToInventory(pickupItem);
+        Destroy(this.gameObject);
     }
 }
 
