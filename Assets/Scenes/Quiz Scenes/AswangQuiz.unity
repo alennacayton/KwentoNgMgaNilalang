@@ -872,7 +872,7 @@ MonoBehaviour:
     - Garlic
     - Human organs
     - Human body parts
-    correctAnswer: 1
+    correctAnswer: 3
   - question: Do I like sucking blood
     answers:
     - Yes
