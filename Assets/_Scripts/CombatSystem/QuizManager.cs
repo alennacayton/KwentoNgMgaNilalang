@@ -19,13 +19,21 @@ public class QuizManager : MonoBehaviour
     public Text scoreTxt;
 
     int totalQuestions = 0;
+    public int trigger_counter = 0;
     public int scoreCount;
     public string score;
 
-    private void start()
+    private void Start()
     {
         totalQuestions = QnA.Count;
         goPanel.SetActive(false);
+
+        trigger_counter++;
+        
+        if (trigger_counter != 1)
+        {
+            QnA.RemoveAt(currentQuestion);
+        }
         generateQuestion();
     }
 
@@ -59,7 +67,7 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQuestion].answers[i];
+            options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].answers[i];
 
             if(QnA[currentQuestion].correctAnswer == i+1)
             {
