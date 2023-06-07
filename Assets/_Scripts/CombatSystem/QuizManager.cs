@@ -15,33 +15,48 @@ public class QuizManager : MonoBehaviour
     public GameObject quizPanel;
     public GameObject goPanel;
 
-    public TMP_Text questionTxt;
-    public Text scoreTxt;
+    public GameObject retryButton;
+    public GameObject continueButton;
+    public GameObject passedText;
+    public GameObject failedText;
 
-    int totalQuestions = 0;
+    public TMP_Text questionTxt;
+
+    public int scoreCount = 0;
     public int trigger_counter = 0;
-    public int scoreCount;
-    public string score;
+    private int totalQuestions;
 
     private void Start()
     {
-        totalQuestions = QnA.Count;
         goPanel.SetActive(false);
 
+        totalQuestions = QnA.Count;
         trigger_counter++;
         
         if (trigger_counter != 1)
         {
             QnA.RemoveAt(currentQuestion);
         }
+
         generateQuestion();
     }
 
     public void gameOver()
     {
+        if (scoreCount == totalQuestions)
+        {
+            passedText.SetActive(true);
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            failedText.SetActive(true);
+            retryButton.SetActive(true);
+        }
+
         quizPanel.SetActive(false);
         goPanel.SetActive(true);
-        //scoreTxt.txt = (scoreCount.ToString()) + "/" + (totalQuestions.ToString());
+
     }
 
     public void retry()
