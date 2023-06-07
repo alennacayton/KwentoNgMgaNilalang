@@ -617,7 +617,8 @@ MonoBehaviour:
   quizPanel: {fileID: 1861688845}
   goPanel: {fileID: 89928186}
   questionTxt: {fileID: 869335095}
-  scoreTxt: {fileID: 833423163}
+  scoreTxt: {fileID: 0}
+  trigger_counter: 0
   scoreCount: 0
   score: 
 --- !u!4 &752823032
@@ -1653,7 +1654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.407, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 218.30003, y: 88.50905}
+  m_AnchoredPosition: {x: 218.30003, y: 170}
   m_SizeDelta: {x: 211.2955, y: 39.6179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564639802
