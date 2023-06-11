@@ -66,7 +66,8 @@ public class QuizManager : MonoBehaviour
 
     public void continueToNextLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void correct()

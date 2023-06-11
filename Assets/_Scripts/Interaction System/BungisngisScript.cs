@@ -63,7 +63,7 @@ public class BungisngisScript : MonoBehaviour
         myImage.enabled = false;
         aswangText.enabled = false;
 
-        SceneManager.LoadScene("BungisngisCombat");
+        SceneManager.LoadScene("BungisngisQuiz");
     }
 
 

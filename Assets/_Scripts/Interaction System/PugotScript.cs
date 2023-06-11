@@ -63,7 +63,7 @@ public class PugotScript : MonoBehaviour
         myImage.enabled = false;
         aswangText.enabled = false;
 
-        SceneManager.LoadScene("PugotCombat");
+        SceneManager.LoadScene("PugotQuiz");
     }
 
 

@@ -64,7 +64,7 @@ public class AswangScript : MonoBehaviour
         myImage.enabled = false;
         aswangText.enabled = false;
 
-        SceneManager.LoadScene("AswangCombat");
+        SceneManager.LoadScene("AswangQuiz");
     }
 
 

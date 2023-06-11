@@ -63,7 +63,7 @@ public class DiwataScript : MonoBehaviour
         myImage.enabled = false;
         aswangText.enabled = false;
 
-        SceneManager.LoadScene("DiwataCombat");
+        SceneManager.LoadScene("DiwataQuiz");
     }
 
 
