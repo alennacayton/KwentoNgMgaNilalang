@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6346871626000873688}
   - component: {fileID: 7255681313778377620}
   - component: {fileID: 1440110377}
+  - component: {fileID: 8892427416901405402}
+  - component: {fileID: 8197665643182408558}
   m_Layer: 0
   m_Name: Bungisngis
   m_TagString: Untagged
@@ -71,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2065060493
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7722747155107682868, guid: 4fe290c0db73087449dd9ae238daf402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,3 +107,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8892427416901405402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229874839110526425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0487e5c9f8e78f849ba1d0515dd56059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInRange: 0
+  triggerRadius: 1.5
+  interactKey: 101
+--- !u!58 &8197665643182408558
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229874839110526425}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.035
