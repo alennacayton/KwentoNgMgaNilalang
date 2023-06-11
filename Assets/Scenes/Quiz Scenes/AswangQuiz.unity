@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: 0.0000095367}
   m_SizeDelta: {x: 570, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70950468
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -365,8 +365,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -770,7 +770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537288287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -873,12 +873,12 @@ MonoBehaviour:
     - Human organs
     - Human body parts
     correctAnswer: 3
-  - question: Do I like sucking blood
+  - question: Do I like sucking blood?
     answers:
     - Yes
     - No
-    - Yes but only from animals
-    - No I prefer eating body parts
+    - Yes, but only from animals
+    - No, I prefer eating body parts
     correctAnswer: 1
   options:
   - {fileID: 1564639800}
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creature has successfully been captured
+  m_text: Creature has successfully been captured!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d6082f8e4fe9cd341a97952aa11c7868, type: 2}
   m_sharedMaterial: {fileID: -2903715024903861418, guid: d6082f8e4fe9cd341a97952aa11c7868, type: 2}
@@ -1281,7 +1281,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 752823031}
         m_TargetAssemblyTypeName: QuizManager, NewAssembly
-        m_MethodName: retry
+        m_MethodName: continueToNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 1087121106}
   - component: {fileID: 1087121109}
   m_Layer: 5
-  m_Name: Option (1)
+  m_Name: Option 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1367,7 +1367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.50006, y: -171.6}
+  m_AnchoredPosition: {x: 182, y: -119.73}
   m_SizeDelta: {x: 211.29553, y: 39.61789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087121106
@@ -1563,8 +1563,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1879,7 +1879,7 @@ GameObject:
   - component: {fileID: 1483959489}
   - component: {fileID: 1483959492}
   m_Layer: 5
-  m_Name: Option (3)
+  m_Name: Option 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1903,7 +1903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181.99997, y: -233.70001}
+  m_AnchoredPosition: {x: 182.00002, y: -181.2}
   m_SizeDelta: {x: 211.29553, y: 39.61789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483959489
@@ -2077,7 +2077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0.407, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 220.65, y: 89.198}
+  m_AnchoredPosition: {x: 217, y: 105.2}
   m_SizeDelta: {x: 211.2955, y: 39.6179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564639802
@@ -2202,7 +2202,7 @@ GameObject:
   - component: {fileID: 1783001244}
   - component: {fileID: 1783001247}
   m_Layer: 5
-  m_Name: Option (2)
+  m_Name: Option 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2226,7 +2226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -179.34995, y: -233.70001}
+  m_AnchoredPosition: {x: -183, y: -181.2}
   m_SizeDelta: {x: 211.29553, y: 39.61789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1783001244
@@ -2503,8 +2503,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2638,8 +2638,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2970,11 +2970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7555489170316589046, guid: fa4363c527108a546a6da2a265cf8edd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07998657
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 7555489170316589046, guid: fa4363c527108a546a6da2a265cf8edd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.0799866
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7555489170316589046, guid: fa4363c527108a546a6da2a265cf8edd, type: 3}
       propertyPath: m_LocalPosition.z
