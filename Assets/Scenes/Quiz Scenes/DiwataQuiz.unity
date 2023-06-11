@@ -937,6 +937,20 @@ MonoBehaviour:
     - Maria Cacao
     - Maria Makiling
     correctAnswer: 4
+  - question: Do I prevent natural disasters?
+    answers:
+    - Maybe
+    - Yes
+    - No
+    - Sometimes
+    correctAnswer: 2
+  - question: How am I described in terms of my appearance?
+    answers:
+    - Wise old woman
+    - Mysterious enchantress
+    - Beautiful young woman
+    - None of the above
+    correctAnswer: 3
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
@@ -1187,8 +1201,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

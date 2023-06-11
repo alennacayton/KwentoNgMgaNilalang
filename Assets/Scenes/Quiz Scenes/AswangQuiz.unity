@@ -880,6 +880,20 @@ MonoBehaviour:
     - Yes, but only from animals
     - No, I prefer eating body parts
     correctAnswer: 1
+  - question: What am I afraid?
+    answers:
+    - Light
+    - Humans
+    - Noise
+    - Blood
+    correctAnswer: 1
+  - question: Do I dislike noise?
+    answers:
+    - Yes
+    - No
+    - Maybe
+    - Talk to your mom
+    correctAnswer: 1
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
@@ -1130,8 +1144,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

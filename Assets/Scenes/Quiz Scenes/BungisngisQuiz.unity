@@ -861,25 +861,39 @@ MonoBehaviour:
   QnA:
   - question: Where do I live?
     answers:
-    - Forest
     - Village
+    - Forest
     - Near Water
     - Mountain
-    correctAnswer: 1
-  - question: Which of the following do I crave the most?
+    correctAnswer: 2
+  - question: What do I look like?
     answers:
-    - Animal flesh
-    - Garlic
-    - Human organs
-    - Human body parts
+    - Two-eyed giant
+    - Three-eyed giant
+    - Two large fangs
+    - Small teeth
     correctAnswer: 3
-  - question: Do I like sucking blood
+  - question: Which of the following best describes my behavior?
+    answers:
+    - Not easily outwitted
+    - Never panics
+    - Easily outwitted
+    - Deceptive
+    correctAnswer: 3
+  - question: Do I have a voracious appetite?
     answers:
     - Yes
     - No
-    - Yes but only from animals
-    - No I prefer eating body parts
+    - Maybe
+    - No, I do
     correctAnswer: 1
+  - question: What is my unique characteristic?
+    answers:
+    - Shape-shifter
+    - Two-eyed giant
+    - Eats babies
+    - Always laughing
+    correctAnswer: 4
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
@@ -1130,8 +1144,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -923,20 +923,34 @@ MonoBehaviour:
     - Animal flesh
     - Women
     correctAnswer: 2
-  - question: Which of the following do I crave the most?
+  - question: Where do I live?
     answers:
-    - Animal flesh
-    - Garlic
-    - Human organs
-    - Human body parts
+    - Mountains
+    - Abandoned House
+    - Trees
+    - Caves
     correctAnswer: 3
-  - question: Do I have the ability to morph into a human?
+  - question: What body part of mine bubbles with blood after detaching my head?
     answers:
-    - Yes
-    - No
-    - Maybe
-    - I can
-    correctAnswer: 1
+    - Stump
+    - Neck
+    - Head
+    - Torso
+    correctAnswer: 2
+  - question: What do I enjoy feeding on?
+    answers:
+    - Snakes
+    - Insects
+    - Both
+    - Neither
+    correctAnswer: 3
+  - question: Which animals can I morph into?
+    answers:
+    - Dog
+    - Boar
+    - Huge pheasant
+    - All of the above
+    correctAnswer: 4
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
@@ -1187,8 +1201,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
