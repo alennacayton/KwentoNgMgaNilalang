@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7041877124081274141}
   - component: {fileID: 4695110519412913547}
   - component: {fileID: 1766051150303985605}
+  - component: {fileID: -678884109475299113}
   m_Layer: 0
   m_Name: Diwata
   m_TagString: Untagged
@@ -138,3 +139,26 @@ MonoBehaviour:
   isInRange: 0
   triggerRadius: 1.5
   interactKey: 101
+--- !u!114 &-678884109475299113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5317759323629701040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e158bea7efd68c44bbaca3bb62e88c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogueSets:
+  - dialogue:
+      name: Maria Makiling
+      sentences:
+      - Welcome, traveler, to the realm I hold dear. I am Maria Makiling, guardian
+        of this sacred mountain. You have ventured far, but do you possess the strength
+        to face me in battle?
+      - Prepare yourself, for I am not just a guardian of peace and harmony, but
+        a force to be reckoned with. Show me your resolve!
+    condition: diwataCombat

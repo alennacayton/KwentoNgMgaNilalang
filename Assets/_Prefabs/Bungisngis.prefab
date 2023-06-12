@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1440110377}
   - component: {fileID: 8892427416901405402}
   - component: {fileID: 8197665643182408558}
+  - component: {fileID: -5643680488041564569}
   m_Layer: 0
   m_Name: Bungisngis
   m_TagString: Untagged
@@ -138,3 +139,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.035
+--- !u!114 &-5643680488041564569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229874839110526425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e158bea7efd68c44bbaca3bb62e88c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogueSets:
+  - dialogue:
+      name: Bungisngis
+      sentences:
+      - '* a booming laugh echoes through the trees * Well, well, what do we have
+        here? A puny mortal stumbles upon my domain. Prepare yourself for a battle,
+        weakling!'
+      - Let's see if you can bring a smile to my face... before I bring an end to
+        yours!
+    condition: bungisngisCombat

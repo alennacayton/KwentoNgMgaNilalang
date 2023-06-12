@@ -14,7 +14,7 @@ public class AswangScript : MonoBehaviour
 
 
     private Image myImage;
-    private Text aswangText;
+    private Text creatureText;
     private Text continueText;
     private Text nameText;
 
@@ -36,10 +36,9 @@ public class AswangScript : MonoBehaviour
 
         // Get a reference to the Image component on the GameObject
         myImage = myObject.GetComponent<Image>();
-        aswangText = myObjectText.GetComponent<Text>();
+        creatureText = myObjectText.GetComponent<Text>();
         continueText = objectContinueText.GetComponent<Text>();
         nameText = objectNameText.GetComponent<Text>();
-
 
 
 
@@ -50,12 +49,9 @@ public class AswangScript : MonoBehaviour
     {
         if (isInRange && Input.GetKeyDown(interactKey))
         {
-            Debug.Log("RAWR");
-
-
+  
             myImage.enabled = true;
-        //    aswangText.text = "*eerie, flapping noise*";
-            aswangText.enabled = true;
+            creatureText.enabled = true;
             continueText.enabled = true;
             nameText.enabled = true;
 
@@ -74,7 +70,7 @@ public class AswangScript : MonoBehaviour
 
         // Code to execute after 5 seconds
         myImage.enabled = false;
-        aswangText.enabled = false;
+        creatureText.enabled = false;
         continueText.enabled = false;
         nameText.enabled = false;
 
@@ -93,7 +89,8 @@ public class AswangScript : MonoBehaviour
     {
         //Debug.Log("Item is Out of Range");
         isInRange = false;
-
+        myImage.enabled = false;
+        creatureText.enabled = false;
         continueText.enabled = false;
         nameText.enabled = false;
     }

@@ -53,7 +53,7 @@ public class VillagerScript : MonoBehaviour
         {
             PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
             bool hasQuestItem = playerInventory.HasQuestItem();
-            Debug.Log("Hello There Young Man!!!");
+            Debug.Log("Interacted with NPC...");
             //   GetComponent<Image>().gameObject.SetActive(true);
 
             myImage.enabled = true;
@@ -66,12 +66,56 @@ public class VillagerScript : MonoBehaviour
             if(!hasQuestItem)
             {
                 Debug.Log("Quest Dialogue playing....");
-                dialogueTrigger.TriggerDialogue("aswangQuest");
+
+                switch (SceneManager.GetActiveScene().name)
+                {
+                    case "AreaOne":
+                        dialogueTrigger.TriggerDialogue("aswangQuest");
+                        break;
+
+                    case "AreaTwo":
+                        dialogueTrigger.TriggerDialogue("diwataQuest");
+                        break;
+                    case "AreaThree":
+                        dialogueTrigger.TriggerDialogue("bungisngisQuest");
+                        break;
+
+                    case "AreaFour":
+                        dialogueTrigger.TriggerDialogue("pugotQuest");
+                        break;
+
+                    default:
+                        break;
+
+
+                }
             }
             else
             {
                 Debug.Log("Information Dialogue playing....");
-                dialogueTrigger.TriggerDialogue("aswangInfo");
+
+                switch (SceneManager.GetActiveScene().name)
+                {
+                    case "AreaOne":
+                        dialogueTrigger.TriggerDialogue("aswangInfo");
+                        break;
+
+                    case "AreaTwo":
+                        dialogueTrigger.TriggerDialogue("diwataInfo");
+                        break;
+                    case "AreaThree":
+                        dialogueTrigger.TriggerDialogue("bungisngisInfo");
+                        break;
+
+                    case "AreaFour":
+                        dialogueTrigger.TriggerDialogue("pugotInfo");
+                        break;
+
+                    default:
+                        break;
+
+
+                }
             }
             
 
@@ -80,7 +124,9 @@ public class VillagerScript : MonoBehaviour
         }
     }
 
+ 
 
+    
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
