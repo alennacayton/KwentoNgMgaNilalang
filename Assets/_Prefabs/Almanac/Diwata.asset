@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureImage: {fileID: -80772400799347472, guid: 4fe290c0db73087449dd9ae238daf402, type: 3}
   creatureName: Diwata
-  creatureDescriptions: []
+  creatureDescription: The protector of the mountain's bounty and the townspeople
+    who depend on the mountain's resources, Maria Makiling is the mountain's guardian
+    spirit. She has frequently been called a beautiful young woman who never seems
+    to grow old. Some legends describe her as a protector of the mountain, the Laguna
+    de Bay, and the fish caught there. It is frequently claimed that Mount Makiling
+    resembles the face of Maria herself.
   isEncountered: 0

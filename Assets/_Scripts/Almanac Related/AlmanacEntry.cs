@@ -8,6 +8,9 @@ public class AlmanacEntry : ScriptableObject
 {
     public Sprite creatureImage;
     public string creatureName;
-    public List<string> creatureDescriptions = new List<string>();
+
+    [TextArea(20, 20)]
+    public string creatureDescription;
+
     public bool isEncountered = false;
 }

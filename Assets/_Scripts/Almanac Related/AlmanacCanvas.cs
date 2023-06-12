@@ -17,14 +17,9 @@ public class AlmanacCanvas : MonoBehaviour
     [SerializeField] TextMeshProUGUI creatureName;
     [SerializeField] TextMeshProUGUI creatureDescription;
 
-    private void Awake()
-    {
-        almanacContent = FindObjectOfType<AlmanacContent>();
-        almanacContent.AddEntry(newEntry);
-    }
-
     private void Start()
     {
+        almanacContent = FindObjectOfType<AlmanacContent>();
         currentPageNumber = 0;
         SetPageContents();
     }
@@ -56,14 +51,9 @@ public class AlmanacCanvas : MonoBehaviour
 
         almanacEntry = almanacContent.GetPageContent(currentPageNumber);
 
-
         creatureImage.sprite = almanacEntry.creatureImage;
         creatureName.text = almanacEntry.creatureName;
-
-        foreach (string description in almanacEntry.creatureDescriptions)
-        {
-            creatureDescription.text += "- " + description + "\n";
-        }
+        creatureDescription.text = almanacEntry.creatureDescription;
     }
 
     void SetButtonEnabled()
@@ -88,5 +78,11 @@ public class AlmanacCanvas : MonoBehaviour
         }
     }
 
+    public void SetContentsVisibility(bool isVisible)
+    {
+        creatureImage.enabled = isVisible;
+        creatureName.enabled = isVisible;
+        creatureDescription.enabled = isVisible;
+    }
 
 }

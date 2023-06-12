@@ -30,11 +30,6 @@ public class AlmanacContent : MonoBehaviour
         almanacEntries.Add(almanacEntry);
     }
 
-    public void AddDescription(string description)
-    {
-        almanacEntries[pageSoFar].creatureDescriptions.Add(description);
-    }
-
     public AlmanacEntry GetPageContent(int page)
     {
         return almanacEntries[page];

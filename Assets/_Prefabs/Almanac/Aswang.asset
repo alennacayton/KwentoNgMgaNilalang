@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureImage: {fileID: -2666158604650677948, guid: 4fe290c0db73087449dd9ae238daf402, type: 3}
   creatureName: Aswang
-  creatureDescriptions: []
+  creatureDescription: It is a mythical, evil shape-shifter from the Philippines.
+    They typically live in cemeteries and woods at night because their abilities
+    are greatly, or occasionally completely, diminished during the day. They typically
+    dislike noise and are afraid of light.
+  isEncountered: 0
