@@ -5,9 +5,6 @@ using UnityEngine;
 public class AlmanacContent : MonoBehaviour
 {
     [SerializeField] private List<AlmanacEntry> almanacEntries = new List<AlmanacEntry>();
-    [SerializeField] private int pageSoFar = 0;
-
-    [SerializeField]
 
     private static AlmanacContent instance;
 
