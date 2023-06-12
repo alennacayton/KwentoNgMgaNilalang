@@ -55,6 +55,8 @@ public class AlmanacCanvas : MonoBehaviour
         if (almanacContent.GetAlmanacLength() == 0)
         {
             creatureImage.sprite = null;
+            SetTransparent(creatureImage, 0);
+
             creatureName.text = null;
             creatureDescription.text = null;
             return;
@@ -63,26 +65,22 @@ public class AlmanacCanvas : MonoBehaviour
         almanacEntry = almanacContent.GetPageContent(currentPageNumber);
 
         creatureImage.sprite = almanacEntry.creatureImage;
+        SetTransparent(creatureImage, 1);
+
         creatureName.text = almanacEntry.creatureName;
         creatureDescription.text = almanacEntry.creatureDescription;
     }
 
     void SetButtonEnabled()
     {
-        Color col;
 
         if(almanacContent.GetAlmanacLength() == 0)
         {
             leftButton.enabled = false;
             rightButton.enabled = false;
 
-            col = leftButton.image.color;
-            col.a = 0;
-            leftButton.image.color = col;
-
-            col = rightButton.image.color;
-            col.a = 0;
-            rightButton.image.color = col;
+            SetTransparent(leftButton.image, 0);
+            SetTransparent(rightButton.image, 0);
 
             return;
         }
@@ -91,35 +89,23 @@ public class AlmanacCanvas : MonoBehaviour
         if(currentPageNumber == 0)
         { 
             leftButton.enabled = false;
-
-            col = leftButton.image.color;
-            col.a = 0;
-            leftButton.image.color = col;
+            SetTransparent(leftButton.image, 0);
         }
         else
         {
             leftButton.enabled = true;
-
-            col = leftButton.image.color;
-            col.a = 1;
-            leftButton.image.color = col;
+            SetTransparent(leftButton.image, 1);
         }
 
         if(currentPageNumber == almanacContent.GetAlmanacLength() - 1)
         {
             rightButton.enabled = false;
-
-            col = rightButton.image.color;
-            col.a = 0;
-            rightButton.image.color = col;
+            SetTransparent(rightButton.image, 0);
         }
         else
         {
             rightButton.enabled = true;
-
-            col = rightButton.image.color;
-            col.a = 1;
-            rightButton.image.color = col;
+            SetTransparent(rightButton.image, 1);
         }
     }
 
@@ -130,4 +116,11 @@ public class AlmanacCanvas : MonoBehaviour
         SetButtonEnabled();
     }
 
+    void SetTransparent(Image image, float transparency)
+    {
+
+        Color col = image.color;
+        col.a = transparency;
+        image.color = col;
+    }
 }

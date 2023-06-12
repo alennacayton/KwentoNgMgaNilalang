@@ -17,10 +17,7 @@ public class VillagerScript : MonoBehaviour
     private Text continueText;
     private Text nameText;
 
-
     private DialogueTrigger dialogueTrigger;
-
-
 
     public void Start()
     {
@@ -116,6 +113,8 @@ public class VillagerScript : MonoBehaviour
 
 
                 }
+
+                FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
             }
             
 

@@ -10,7 +10,6 @@ public class AlmanacContent : MonoBehaviour
 
     void Awake()
     {
-
         if (instance != null)
         {
             Destroy(gameObject);
@@ -18,8 +17,6 @@ public class AlmanacContent : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-
-
     }
 
     public void AddEntry(AlmanacEntry almanacEntry)
