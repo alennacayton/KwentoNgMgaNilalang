@@ -30,24 +30,24 @@ public class AlmanacCanvas : MonoBehaviour
 
     public void TurnPageLeft()
     {
-        if(currentPageNumber > 0)
+        SetButtonEnabled();
+
+        if (currentPageNumber > 0)
         {
             currentPageNumber--;
             SetPageContents();  
         }
-
-        SetButtonEnabled();
     }
 
     public void TurnPageRight()
     {
+        SetButtonEnabled();
+
         if (currentPageNumber < almanacContent.GetAlmanacLength() - 1)
         {
             currentPageNumber++;
             SetPageContents();
         }
-
-        SetButtonEnabled();
     }
 
     void SetPageContents()
