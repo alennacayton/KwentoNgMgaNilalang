@@ -1749,9 +1749,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.015686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.9843137
+      objectReference: {fileID: 0}
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.90588236
+      objectReference: {fileID: 0}
     - target: {fileID: 809188037, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.0129582975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.0129582975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.652759
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.652759
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768860234, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 8492629602798520369, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Name
