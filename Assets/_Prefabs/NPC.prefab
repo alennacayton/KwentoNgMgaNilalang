@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1803537901722738225}
   - component: {fileID: 7081381907105145767}
   - component: {fileID: 9088399858934688129}
+  - component: {fileID: 753372310153217351}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -117,3 +118,164 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.019509017}
   serializedVersion: 2
   m_Radius: 0.9338638
+--- !u!114 &753372310153217351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648661667295815093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e158bea7efd68c44bbaca3bb62e88c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 0}
+  dialogueSets:
+  - dialogue:
+      name: Villager
+      sentences:
+      - "Hello there young man! I need to saut\xE9 some pork, but i'm out of garlic.
+        Can you help me find some?"
+    condition: aswangQuest
+  - dialogue:
+      name: Villager
+      sentences:
+      - "Oh, thank you, kind traveler! You've brought me the garlic I needed for
+        my saut\xE9ed pork. It will surely add that perfect touch of flavor. Now,
+        as promised, let me tell you a tale of the creatures that roam these lands"
+      - 'Long ago, our village was plagued by a fearsome creature known as the Aswang.
+        It is a wicked and cunning shape-shifter that dwells in the shadows. Cemeteries
+        and dense woods are its favored haunts, for its powers are weakened during
+        daylight.
+
+'
+      - 'Legend has it that the Aswang despises noise, and even the faintest sound
+        can send shivers down its spine. So, villagers would keep their homes quiet
+        and serene at night, hoping to deter its wicked presence.
+
+'
+      - 'But the Aswang''s true terror lies in its fear of light. Bright flames and
+        the warm glow of lanterns make it quiver with fright. The villagers would
+        illuminate their paths and surround their homes with the comforting embrace
+        of light, knowing it would keep the creature at bay.
+
+'
+      - 'So, traveler, remember this tale as you continue your journey through these
+        lands. Be wary of the Aswang''s lurking presence and remember the power of
+        light to ward off its malevolence. May your path be guided by the glow of
+        courage and wisdom.
+
+'
+    condition: aswangInfo
+  - dialogue:
+      name: Villager
+      sentences:
+      - 'Greetings, brave traveler! I am in dire need of your assistance. Our elderly
+        in the nearby village are struggling to keep warm during these chilly nights.
+        Would you lend a helping hand and gather firewood from the surrounding area?
+        Your kindness would bring much-needed comfort to their homes.
+
+'
+    condition: diwataQuest
+  - dialogue:
+      name: Villager
+      sentences:
+      - 'Oh, thank you, kind adventurer! You''ve gathered the firewood we need to
+        help the elderly in our neighboring village. Your generosity will warm their
+        hearts and their homes. Let  me share with you a tale about the mythical
+        creature that resides in these lands.
+
+'
+      - 'Long ago, our mountain was watched over by a benevolent guardian spirit
+        known as Maria Makiling, the Diwata. She is the protector of the mountain''s
+        bountiful resources and the people who rely on them. Legends speak of her
+        everlasting beauty, as she never seems to age.
+
+'
+      - 'Maria Makiling is often depicted as a young woman of unmatched grace and
+        radiance. She is said to be the one who safeguards the mountain, the enchanting
+        Laguna de Bay, and the abundance of fish that dwell within its waters. The
+        contours of Mount Makiling itself are believed to bear a striking resemblance
+        to her very face.
+
+'
+      - Throughout generations, tales have been woven about the Diwata's compassion
+        for the land and its people. She is said to bless the crops, guide lost wanderers
+        to safety, and bring good fortune to those who honor the mountain's natural
+        treasures
+      - 'So, traveler, remember this tale as you journey through these lands. Cherish
+        the gifts bestowed upon us by the mountain and its guardian spirit, Maria
+        Makiling. May her watchful presence guide you towards prosperity and fill
+        your heart with reverence for the wonders of nature.
+
+'
+    condition: diwataInfo
+  - dialogue:
+      name: Villager
+      sentences:
+      - 'Ah, greetings, young traveler ! I find myself in need of a peculiar ingredient
+        for a potion I am brewing. Would you be willing to aid me in gathering fangs
+        from the creatures that roam these lands? Fear not, for it is for a noble
+        cause.
+
+'
+    condition: bungisngisQuest
+  - dialogue:
+      name: Villager
+      sentences:
+      - 'Excellent! You''ve retrieved the fangs I required. Your contribution will
+        greatly enhance the potency of the potion. But before you leave, allow me
+        to tell you a tale about a fascinating creature that inhabits these very
+        forests.
+
+'
+      - Legend speaks of the Bungisngis, a mythical being that roams around these
+        forests. This creature is known for its sheer size and perpetual laughter.
+        Imagine a towering figure with a thick upper lip that can be used as a hat
+        to cover its head, and ears that possess remarkable hearing.
+      - "The Bungisngis dwells deep within the heart of the forest, satiating its
+        insatiable appetite. It devours anything palatable that crosses its path\u2014animals,
+        fruits, vegetables, roots, and even cooked food. No delicacy is safe from
+        its voracious appetite.\r\n"
+      - "Despite its formidable strength, the Bungisngis possesses a peculiar vulnerability\u2014it
+        is easily outwitted and prone to panicking. Quick thinking and clever strategies
+        can render this mighty creature helpless, despite its size.\r\n"
+      - 'So, dear traveler, take this tale with you on your journey. May it serve
+        as a reminder of the importance of wit and cunning in the face of adversity.
+        And know that your aid in procuring these fangs will not only benefit my
+        potion but also contribute to the lore and legends that enrich our land.
+
+'
+    condition: bungisngisInfo
+  - dialogue:
+      name: Villager
+      sentences:
+      - Oh, greetings, traveler! I find myself in an awkward predicament and humbly
+        request your assistance. It seems that some undergarments have gone missing
+        from our village, and I suspect the mischievous Pugot may be to blame. Would
+        you be willing to help me retrieve them?
+    condition: pugotQuest
+  - dialogue:
+      name: Villager
+      sentences:
+      - Ah, you have found the missing undergarments! You have my deepest gratitude
+        for your aid in this peculiar matter. Now, allow me to share with you a tale
+        about the creature responsible for these mysterious disappearances.
+      - Legend speaks of the Pugot, a peculiar and eerie creature that roams these
+        lands. It is known for its headless form, a terrifying sight to behold. The
+        Pugot possesses the uncanny ability to detach its head without losing its
+        life, leaving behind a bubbling stump where its neck should be.
+      - "This enigmatic being, often depicted as a black and gigantic figure, makes
+        its home within the trees. It has the remarkable power to transform into
+        different creatures\u2014a dog, a boar, or even a magnificent pheasant. Its
+        speed is unmatched as it navigates through the branches, hunting for snakes
+        and insects among the foliage."
+      - However, the Pugot has a mischievous side. It derives pleasure from playing
+        pranks on unsuspecting individuals. One of its favorite tricks is to appear
+        before people without its head, causing fear and alarm. And, strangely enough,
+        the Pugot has a peculiar fondness for women's underwear. It will slyly snatch
+        them from clotheslines as they are being dried.
+      - "So, dear traveler, be cautious of the Pugot\u2019s mischievous nature. May
+        your path be guided by the glow of courage and wisdom."
+    condition: pugotInfo

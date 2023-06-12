@@ -4,10 +4,34 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public DialogueManager dialogueManager;
+    public DialogueSet[] dialogueSets;
 
-    public void TriggerDialogue()
+    private void Start()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
+
+    public void TriggerDialogue(string condition)
+    {
+        foreach (DialogueSet dialogueSet in dialogueSets)
+        {
+            if (dialogueSet.condition == condition)
+            {
+                dialogueManager.StartDialogue(dialogueSet);
+                return;
+            }
+        }
+
+        Debug.LogWarning("No dialogue set found for condition: " + condition);
+    }
+}
+
+
+
+[System.Serializable]
+public class DialogueSet
+{
+    public Dialogue dialogue;
+    public string condition;
 }
