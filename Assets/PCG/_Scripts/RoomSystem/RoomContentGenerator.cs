@@ -159,7 +159,7 @@ public class RoomContentGenerator : MonoBehaviour
         } else if (SceneManager.GetActiveScene().name.Equals("AreaThree"))
         {
             spawnedObjects.AddRange(
-            pugotRoom.ProcessRoom(
+            bungisngisRoom.ProcessRoom(
                 bossRoomKey,
                 bossRoomValues,
                 dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))
@@ -167,7 +167,7 @@ public class RoomContentGenerator : MonoBehaviour
         } else if (SceneManager.GetActiveScene().name.Equals("AreaFour"))
         {
             spawnedObjects.AddRange(
-               bungisngisRoom.ProcessRoom(
+               pugotRoom.ProcessRoom(
                    bossRoomKey,
                    bossRoomValues,
                    dungeonData.GetRoomFloorWithoutCorridors(bossRoomKey))

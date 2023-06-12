@@ -36,4 +36,17 @@ public class PlayerInventory : MonoBehaviour
     {
         return inventoryItems.Count;
     }
+
+    public bool HasQuestItem()
+    {
+        foreach (Item item in inventoryItems)
+        {
+            if (item is QuestItem)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
