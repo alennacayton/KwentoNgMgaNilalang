@@ -6,9 +6,13 @@ public class InventoryButtonManager : MonoBehaviour
 
     public GameObject inventory;
     bool isOpen;
+    bool isStartingCloseInventory = true;
+
+    SoundEffects soundEffects;
 
     void Start()
     {
+        soundEffects = FindObjectOfType<SoundEffects>();
         CloseInventory();
     }
 
@@ -24,12 +28,21 @@ public class InventoryButtonManager : MonoBehaviour
     {
         inventory.SetActive(true);
         isOpen = true;
+        soundEffects.PlayInventoryClick(true);
     }
 
     void CloseInventory()
     {
+
         inventory.SetActive(false);
         isOpen = false;
+
+        if (isStartingCloseInventory)
+        {
+            isStartingCloseInventory = false;
+            return;
+        }
+        soundEffects.PlayInventoryClick(false);
     }
 
 

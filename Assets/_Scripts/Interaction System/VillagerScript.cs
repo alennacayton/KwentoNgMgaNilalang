@@ -118,7 +118,7 @@ public class VillagerScript : MonoBehaviour
 
 
                     //FOR TESTING PURPOSES
-                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
                 }
                 
             }

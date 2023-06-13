@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: -627027647, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   nameOfItem: Area Three Note
   message: It appears as a one-eyed giant with two large fangs and big teeth
-  tag: 0
+  tag: 1

@@ -18,8 +18,10 @@ public class AlmanacCanvas : MonoBehaviour
     [SerializeField] TextMeshProUGUI creatureName;
     [SerializeField] TextMeshProUGUI creatureDescription;
 
+    SoundEffects soundEffects;
     private void Awake()
     {
+        soundEffects = FindObjectOfType<SoundEffects>();
         almanacContent = FindObjectOfType<AlmanacContent>();
         currentPageNumber = 0;
 
@@ -37,6 +39,7 @@ public class AlmanacCanvas : MonoBehaviour
         }
 
         SetButtonEnabled();
+        PlayTurnPageSoundEffect();
     }
 
     public void TurnPageRight()
@@ -48,6 +51,7 @@ public class AlmanacCanvas : MonoBehaviour
         }
 
         SetButtonEnabled();
+        PlayTurnPageSoundEffect();
     }
 
     void SetPageContents()
@@ -122,5 +126,10 @@ public class AlmanacCanvas : MonoBehaviour
         Color col = image.color;
         col.a = transparency;
         image.color = col;
+    }
+
+    void PlayTurnPageSoundEffect()
+    {
+        soundEffects.PlayTurnAlmanacPage();
     }
 }

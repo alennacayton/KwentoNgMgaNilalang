@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: -627027647, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   nameOfItem: Area Four Note
   message: It appears as a black, gigantic, headless being
-  tag: 1
+  tag: 0
