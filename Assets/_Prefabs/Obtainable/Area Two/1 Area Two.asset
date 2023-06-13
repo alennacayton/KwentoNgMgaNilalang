@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: -627027647, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   nameOfItem: Area Two Note
   message: Her appearance resembles the profile of a sleeping woman
-  tag: 0
+  tag: 1

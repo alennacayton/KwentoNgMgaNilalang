@@ -7,7 +7,7 @@ public class AlmanacButtonManager : MonoBehaviour
     public GameObject almanac;
     bool isOpen;
 
-    void Awake()
+    void Start()
     {
         CloseAlmanac();
     }

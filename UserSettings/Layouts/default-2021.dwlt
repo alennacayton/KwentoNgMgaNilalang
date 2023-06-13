@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1520
     height: 756.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 368.80005
     height: 488
-  m_MinSize: {x: 276, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 92
+  controlID: 59
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 435.2
     height: 488
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 93
+  controlID: 60
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 94
+  controlID: 61
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,7 +313,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 533.6
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -423,22 +423,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PCG/_Sprites
+    - Assets/_Scripts/Almanac Related
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/PCG/_Sprites
+  - Assets/_Scripts/Almanac Related
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\KwentoNgMgaNilalangTemporary
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 350.2}
-    m_SelectedIDs: 6c6b0000
-    m_LastClickedID: 27500
-    m_ExpandedIDs: 000000007c6900007e69000080690000826900008469000086690000886900008a6900005a6b00007a6b00007e6b000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 255}
+    m_SelectedIDs: de830000
+    m_LastClickedID: 33758
+    m_ExpandedIDs: 00000000328200003482000036820000388200003a8200003c8200003e82000040820000dc830000e883000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -466,7 +466,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007c6900007e69000080690000826900008469000086690000886900008a690000
+    m_ExpandedIDs: 00000000328200003482000036820000388200003a8200003c8200003e82000040820000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,24 +552,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 3522}
-      m_SelectedIDs: aa8dfdff
-      m_LastClickedID: -160342
-      m_ExpandedIDs: ca8dfdffce8dfdffda8dfdffae8efdff828ffdff46b7fdff8cbbfdff54ddffff74ddffff78ddffffe2fafffff4ffffff1463000022630000f263000068eb0000bceb00000eec0000a2ec0000d0ec0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: d8860100
+      m_LastClickedID: 100056
+      m_ExpandedIDs: 3486feff2a87feff3e89feff7a99feff58d7feff4ed8feff8edafeff7eeafeff2aecfefff2fcfeff1627ffff343affffbe54ffffd855fffff256ffff0c58ffff2659ffff425affffa65cffff665effff5662ffff6c64ffff4067ffffde68fffff269ffff4480ffff5e81ffff7e83ffff4685fffff686ffffe888ffffae8afffffa8effff3097ffff3497ffff4097ffff8c9affff909affff9c9affff989fffff9c9fffffa89fffff68a1ffff40a9ffffecacffff4cb1ffffa2b7ffffbeb8ffffd8b9ffffeebcffff8abfffffa6c0ffff4ac3ffff76c6ffffb0c7ffffccc8fffff8caffff98cdffff16cfffff12d6ffff5cd7ffff50d8ffff8ad9ffff7edaffffd8dbffffacdcffffc6ddffffbadeffff72e1ffffe8e8fffff4ffffffeaa60000b2a70000ccb20000fec500008ac800001ccd0000aacf000092d7000080dc00006ce000002ce100000e2a0100e42a01002c6701003a7d0100687d0100307e01003c7e0100667e0100be7e0100d8820100088301002c830100a08301005a870100f6870100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Almanac
+        m_OriginalName: Almanac
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 64606
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -859,9 +859,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 434.22552, y: 211.3446, z: -1.9341393}
+    m_Target: {x: 71.15273, y: -65.973625, z: -0.08596067}
     speed: 2
-    m_Value: {x: 434.22552, y: 211.3446, z: -1.9341393}
+    m_Value: {x: 71.15273, y: -65.973625, z: -0.08596067}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -912,9 +912,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 208.6551
+    m_Target: 9.096071
     speed: 2
-    m_Value: 208.6551
+    m_Value: 9.096071
   m_Ortho:
     m_Target: 1
     speed: 2
