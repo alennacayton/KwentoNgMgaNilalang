@@ -1817,6 +1817,14 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.9056604
       objectReference: {fileID: 0}
+    - target: {fileID: 1819321186, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819321186, guid: dac8789114748614c94e14da9500094d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8492629602798520369, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Name
       value: Almanac Canvas

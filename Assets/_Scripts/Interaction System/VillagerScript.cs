@@ -19,6 +19,7 @@ public class VillagerScript : MonoBehaviour
 
     private DialogueTrigger dialogueTrigger;
 
+    private bool hasObtainedEntry = false;
     public void Start()
     {
         isInRange = false;
@@ -114,7 +115,14 @@ public class VillagerScript : MonoBehaviour
 
                 }
 
-                FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+                if(!hasObtainedEntry)
+                {
+                    hasObtainedEntry = true;
+                    FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                }
+              
             }
             
 
