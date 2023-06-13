@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField]
+    public GameObject npcDialogue;
     public Text nameText;
     public Text dialogueText;
   //  public AudioSource typingAudioSource;
@@ -14,6 +16,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueSet dialogueSet)
     {
+        npcDialogue.SetActive(true);
         nameText.text = dialogueSet.dialogue.name;
 
         currentSentenceQueue = new Queue<string>(dialogueSet.dialogue.sentences);
@@ -75,5 +78,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End of conversation");
+        npcDialogue.SetActive(false);
     }
 }

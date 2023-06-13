@@ -426,7 +426,7 @@ MonoBehaviour:
     passed down through generations, they ventured forth, driven by a burning desire
     to capture and contain the escaped creatures.
   - ...........
-  typingSpeed: 0.05
+  typingSpeed: 0.04
   delayBetweenTexts: 5
 --- !u!4 &1380471705
 Transform:

@@ -1967,10 +1967,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a470e9baf1d9f4cb2fe363c16b505c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcDialogue: {fileID: 1355230554}
   nameText: {fileID: 973780672}
   dialogueText: {fileID: 36384690}
-  typingAudioSource: {fileID: 652430549}
-  typingSoundClip: {fileID: 8300000, guid: 7cc057bed53baf34799f52aab3c84800, type: 3}
 --- !u!4 &652430548
 Transform:
   m_ObjectHideFlags: 0

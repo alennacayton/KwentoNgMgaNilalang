@@ -17566,6 +17566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a470e9baf1d9f4cb2fe363c16b505c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcDialogue: {fileID: 868182502}
   nameText: {fileID: 2073955466}
   dialogueText: {fileID: 52918661}
 --- !u!4 &1540078507
