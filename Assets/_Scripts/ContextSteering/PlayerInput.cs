@@ -9,8 +9,11 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private KeyCode interactKey;
 
+    public AudioSource movementSoundEffect;
+
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
     public UnityEvent OnAttack;
+
 
     //[SerializeField]
     //private InputActionReference movement, attack, pointerPosition;
@@ -26,11 +29,14 @@ public class PlayerInput : MonoBehaviour
         //OnMovementInput?.Invoke(movement.action.ReadValue<Vector2>().normalized);
         OnMovementInput?.Invoke(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
         OnPointerInput?.Invoke(GetPointerInput());
-        if(Input.GetMouseButtonDown(0))
-            OnAttack?.Invoke();
-
-
-
+        if(Input.GetKey(KeyCode.W) ||Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        {
+            movementSoundEffect.enabled = true;
+        }
+        else
+        {
+            movementSoundEffect.enabled = false;
+        }
         /*
         if(Input.GetKeyDown(interactKey))
         {
