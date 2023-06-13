@@ -6,9 +6,13 @@ public class AlmanacButtonManager : MonoBehaviour
 {
     public GameObject almanac;
     bool isOpen;
+    bool isStartingCloseAlmanac = true;
+
+    SoundEffects soundEffects;
 
     void Start()
     {
+        soundEffects = FindObjectOfType<SoundEffects>();
         CloseAlmanac();
     }
 
@@ -24,11 +28,20 @@ public class AlmanacButtonManager : MonoBehaviour
     {
         almanac.SetActive(true);
         isOpen = true;
+        soundEffects.PlayInventoryClick(true);
     }
 
     void CloseAlmanac()
     {
         almanac.SetActive(false);
         isOpen = false;
+
+        if (isStartingCloseAlmanac)
+        {
+            isStartingCloseAlmanac = false;
+            return;
+        }
+
+        soundEffects.PlayInventoryClick(false);
     }
 }

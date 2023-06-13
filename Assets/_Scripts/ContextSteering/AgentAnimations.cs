@@ -5,29 +5,50 @@ using UnityEngine;
 public class AgentAnimations : MonoBehaviour
 {
     private Animator animator;
+    private KeyCode previousKey;
+    private GameManager gameManager;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
-    public void RotateToPointer(Vector2 lookDirection)
+    private void Update()
     {
-        Vector3 scale = transform.localScale;
-        if (lookDirection.x > 0)
-        {
-            scale.x = 1;
+        if (Input.GetKeyDown(gameManager.upKey)){
+            animator.SetBool("upPress", true);
         }
-        else if (lookDirection.x < 0)
+        if (Input.GetKeyDown(gameManager.downKey))
         {
-            scale.x = -1;
+            animator.SetBool("downPress", true);
         }
-        transform.localScale = scale;
-    }
+        if (Input.GetKeyDown(gameManager.leftKey))
+        {
+            animator.SetBool("leftPress", true);
+        }
+        if (Input.GetKeyDown(gameManager.rightKey))
+        {
+            animator.SetBool("rightPress", true);
+        }
 
-    public void PlayAnimation(Vector2 movementInput)
-    {
-        animator.SetBool("Running", movementInput.magnitude > 0);
 
+
+        if (Input.GetKeyUp(gameManager.upKey))
+        {
+            animator.SetBool("upPress", false);
+        }
+        if (Input.GetKeyUp(gameManager.downKey))
+        {
+            animator.SetBool("downPress", false);
+        }
+        if (Input.GetKeyUp(gameManager.leftKey))
+        {
+            animator.SetBool("leftPress", false);
+        }
+        if (Input.GetKeyUp(gameManager.rightKey))
+        {
+            animator.SetBool("rightPress", false);
+        }
     }
 }
