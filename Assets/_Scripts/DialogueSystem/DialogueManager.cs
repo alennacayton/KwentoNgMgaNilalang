@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
+  //  public AudioSource typingAudioSource;
+ //   public AudioClip typingSoundClip;
 
     private Queue<string> currentSentenceQueue;
 
@@ -32,19 +34,44 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-
+    
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
         
         foreach (char letter in sentence.ToCharArray())
         {
+            //PlayTypingSound();
             yield return new WaitForSeconds(0.02f);
             dialogueText.text += letter;
             yield return null;
         }
     }
+    
+/*
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
 
+        // Calculate the delay for each character based on the length of the audio clip
+        float delay = typingSoundClip.length / sentence.Length;
+
+        foreach (char letter in sentence.ToCharArray())
+        {
+           
+            dialogueText.text += letter;
+            PlayTypingSound();
+            yield return new WaitForSeconds(delay);
+        }
+    }
+    
+
+    void PlayTypingSound()
+    {
+        typingAudioSource.PlayOneShot(typingSoundClip);
+    }
+
+    */
     void EndDialogue()
     {
         Debug.Log("End of conversation");
