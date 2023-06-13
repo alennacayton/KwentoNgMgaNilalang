@@ -1046,7 +1046,7 @@ MonoBehaviour:
     - No
     - Yes, i dislike all noises
     - Maybe
-    correctAnswer: 1
+    correctAnswer: 3
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
