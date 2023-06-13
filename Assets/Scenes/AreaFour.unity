@@ -29254,10 +29254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7457602332568401722, guid: 1672d5c00dc79884b9bff28c1511062f, type: 3}
-      propertyPath: chestOpen
-      value: 
-      objectReference: {fileID: 8300000, guid: 0ea667d2e3a5f4743bc179c252e81edc, type: 3}
     - target: {fileID: 7457602332568401723, guid: 1672d5c00dc79884b9bff28c1511062f, type: 3}
       propertyPath: m_Name
       value: Sound Effects
