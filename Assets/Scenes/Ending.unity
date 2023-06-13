@@ -417,21 +417,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1931814716}
   textStrings:
-  - In a world shrouded in mystery and danger, where mythical creatures were once
-    locked away in a prison of ancient stone, chaos had erupted. These magnificent
-    beings, long confined to legends and whispered tales, had broken free from their
-    bonds. Now, the realm teetered on the brink of imbalance and unrest...
-  - Our story begins with a young creature hunter traveler, who embarked on a quest
-    to restore order to this fractured world. Determined and armed with knowledge
-    passed down through generations, they ventured forth, driven by a burning desire
-    to capture and contain the escaped creatures...
-  - Now, as the traveler stood at the precipice of their destiny, they faced the
-    ultimate challenge. The path ahead would be fraught with danger, uncertainty,
-    and unimaginable wonders. But armed with their knowledge, their unwavering determination,
-    and a heart filled with the spirit of adventure, the young creature hunter traveler
-    prepared to embark on their quest, ready to restore order and bring harmony to
-    this world of mythical beasts...
-  typingSpeed: 0.03
+  - The young creature hunter traveler stood in the midst of a transformed world,
+    their journey now complete. The once-escaped mythical creatures encircled them,
+    a testament to their success in restoring order and balance...
+  - With the world now in balance, the traveler knew their mission was complete.
+    Their presence had brought about a renewed sense of unity and tranquility, as
+    mythical creatures and humans coexisted in harmony once more...
+  - With a sense of fulfillment, the traveler embraced the ongoing cycle of change
+    and growth in the world they had helped restore. Their journey had ended, but
+    the lessons learned and the bonds forged would endure, guiding them and future
+    generations to come...
+  typingSpeed: 0.05
   delayBetweenTexts: 3
 --- !u!4 &1380471705
 Transform:

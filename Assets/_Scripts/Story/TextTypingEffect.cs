@@ -33,6 +33,14 @@ public class TextTypingEffect : MonoBehaviour
         }
 
         // Load the next scene after displaying all the text
-        SceneManager.LoadScene("AreaOne");
+
+        if(SceneManager.GetActiveScene().name == "CutScene")
+        {
+            SceneManager.LoadScene("AreaOne");
+        }
+        if (SceneManager.GetActiveScene().name == "Ending")
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

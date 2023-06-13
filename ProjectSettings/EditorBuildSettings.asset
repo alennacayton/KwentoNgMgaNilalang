@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene.unity
     guid: 89c98ef69fab702429b6ad411b0a8c16
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 436b60322632d71468878503f90802f0
+  - enabled: 1
     path: Assets/Scenes/AreaOne.unity
     guid: d4c110ea10cf3d942ba9f9b3abb75546
   - enabled: 1
@@ -38,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quiz Scenes/PugotQuiz.unity
     guid: 25fa3567bd8e8d1419334cc224ff7ba8
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: e9d567b7d8df45d49bdaad22f428c22d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
