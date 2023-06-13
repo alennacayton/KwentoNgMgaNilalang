@@ -19,6 +19,8 @@ public class VillagerScript : MonoBehaviour
 
     private DialogueTrigger dialogueTrigger;
 
+    private bool hasObtainedEntry = false;
+
     public void Start()
     {
         isInRange = false;
@@ -59,6 +61,9 @@ public class VillagerScript : MonoBehaviour
 
             continueText.enabled = true;
             nameText.enabled = true;
+
+            //FOR TESTING PURPOSES
+            //hasQuestItem = true;
 
             if(!hasQuestItem)
             {
@@ -114,7 +119,11 @@ public class VillagerScript : MonoBehaviour
 
                 }
 
-                FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+                if (!hasObtainedEntry)
+                {
+                    FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+                    hasObtainedEntry = true;
+                }
             }
             
 
