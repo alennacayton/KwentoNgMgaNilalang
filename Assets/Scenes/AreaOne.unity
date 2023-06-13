@@ -1313,6 +1313,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 604386775, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0.015686275
@@ -1341,10 +1342,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1251200317, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
+=======
+>>>>>>> parent of b5ac7d8 (Update AreaOne.unity)
     - target: {fileID: 809188037, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1768860233, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
@@ -1409,6 +1413,8 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of b5ac7d8 (Update AreaOne.unity)
     - target: {fileID: 8492629602798520369, guid: dac8789114748614c94e14da9500094d, type: 3}
       propertyPath: m_Name
       value: Almanac Canvas
