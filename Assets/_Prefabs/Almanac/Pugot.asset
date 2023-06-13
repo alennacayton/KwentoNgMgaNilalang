@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a5eb4f616ead244af7ec73a82ee517, type: 3}
+  m_Name: Pugot
+  m_EditorClassIdentifier: 
+  creatureImage: {fileID: -1262846635051743388, guid: 4fe290c0db73087449dd9ae238daf402, type: 3}
+  creatureName: Pugot
+  creatureDescription: The Pugot is a headless creature that can detach its head
+    without dying. It is often depicted as a black, gigantic being that usually resides
+    in trees. The Pugot is known to morph into a dog, a boar, or a huge pheasant,
+    and it can move at great speeds, feeding on snakes and insects it finds among
+    the trees. This creature has a mischievous side, as it likes to scare people
+    by showing up without its head, leaving the exposed stump of its neck bubbling
+    with blood. Additionally, the Pugot is known for its fondness for women's underwear
+    and will steal them while they are being dried on a clothesline.
+  isEncountered: 0

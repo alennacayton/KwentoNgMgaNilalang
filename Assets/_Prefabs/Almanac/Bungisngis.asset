@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a5eb4f616ead244af7ec73a82ee517, type: 3}
+  m_Name: Bungisngis
+  m_EditorClassIdentifier: 
+  creatureImage: {fileID: 7722747155107682868, guid: 4fe290c0db73087449dd9ae238daf402, type: 3}
+  creatureName: Bungisngis
+  creatureDescription: The Bungisngis is a mythical creature in Filipino folklore
+    that is often described as a large, strong man who is always laughing. It has
+    a thick, protruding upper lip that it can use to cover the top of its head like
+    a hat and has superb hearing. It is said to dwell in the forests and has a voracious
+    appetite for anything palatable, including animals, fruits, vegetables, roots,
+    and cooked food. Despite its strength, the Bungisngis is easily outwitted and
+    quickly panics.
+  isEncountered: 0

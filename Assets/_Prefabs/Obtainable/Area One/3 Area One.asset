@@ -15,4 +15,4 @@ MonoBehaviour:
   sprite: {fileID: -627027647, guid: d5ac94fca579fcd4c97752eb9cd6fb95, type: 3}
   nameOfItem: Area One Note
   message: It sucks the blood out of its sleeping victims at night
-  tag: 1
+  tag: 0

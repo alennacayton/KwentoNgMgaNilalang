@@ -7,7 +7,7 @@ public class InventoryButtonManager : MonoBehaviour
     public GameObject inventory;
     bool isOpen;
 
-    void Awake()
+    void Start()
     {
         CloseInventory();
     }

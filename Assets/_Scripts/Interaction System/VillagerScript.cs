@@ -16,11 +16,7 @@ public class VillagerScript : MonoBehaviour
     private Text npcText;
     private Text continueText;
     private Text nameText;
-
-
     private DialogueTrigger dialogueTrigger;
-
-
 
     public void Start()
     {
@@ -57,7 +53,7 @@ public class VillagerScript : MonoBehaviour
             //   GetComponent<Image>().gameObject.SetActive(true);
 
             myImage.enabled = true;
-          //  npcText.text = "Hello there young man! I need to sauté some pork, but i'm out of garlic. Can you help me find some?";
+          //  npcText.text = "Hello there young man! I need to sautï¿½ some pork, but i'm out of garlic. Can you help me find some?";
             npcText.enabled = true;
 
             continueText.enabled = true;
@@ -113,9 +109,8 @@ public class VillagerScript : MonoBehaviour
 
                     default:
                         break;
-
-
                 }
+                FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
             }
             
 
@@ -123,10 +118,6 @@ public class VillagerScript : MonoBehaviour
 
         }
     }
-
- 
-
-    
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

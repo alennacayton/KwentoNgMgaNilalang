@@ -21,5 +21,7 @@ public class QuestItem : Item
         PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
         playerInventory.AddItemToInventory(this);
         */
+
+        //FindObjectOfType<AlmanacCanvas>().AddContentToAlmanac();
     }
 }
