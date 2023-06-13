@@ -431,8 +431,8 @@ MonoBehaviour:
     and a heart filled with the spirit of adventure, the young creature hunter traveler
     prepared to embark on their quest, ready to restore order and bring harmony to
     this world of mythical beasts
-  typingSpeed: 0.04
-  delayBetweenTexts: 5
+  typingSpeed: 0.03
+  delayBetweenTexts: 3
 --- !u!4 &1380471705
 Transform:
   m_ObjectHideFlags: 0
