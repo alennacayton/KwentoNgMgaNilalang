@@ -33,6 +33,7 @@ public class NoteItem : Item
         noteText.ShowNote();
 
         FindObjectOfType<InventoryButtonManager>().ButtonPressed();
+        FindObjectOfType<SoundEffects>().PlayTurnAlmanacPage();
 
         Debug.Log("HELLO WORLD. THIS SLOT HAS BEEN USED \n");
     }

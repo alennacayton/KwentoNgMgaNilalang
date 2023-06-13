@@ -13,6 +13,10 @@ public class SoundEffects : MonoBehaviour
 
     [SerializeField] List<AudioClip> almanacPageTurning = new List<AudioClip>();
 
+    [SerializeField] AudioClip chestOpen;
+
+    [SerializeField] AudioClip pickupItem;
+
     AudioSource audioSource;
 
     void Awake()
@@ -50,6 +54,16 @@ public class SoundEffects : MonoBehaviour
         int randomIndex = random.Next(almanacPageTurning.Count);
 
         PlayAudioClip(almanacPageTurning[randomIndex]);
+    }
+
+    public void PlayOpenChest()
+    {
+        PlayAudioClip(chestOpen);
+    }
+
+    public void PlayPickupItem()
+    {
+        PlayAudioClip(pickupItem);
     }
 
     public void PlayAudioClip(AudioClip audioClip)

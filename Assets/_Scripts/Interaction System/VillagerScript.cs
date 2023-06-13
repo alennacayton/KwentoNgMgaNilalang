@@ -9,7 +9,7 @@ public class VillagerScript : MonoBehaviour
 
     public bool isInRange;
     // Start is called before the first frame update
-    [SerializeField] private float triggerRadius = 1.5f;
+    [SerializeField] private float triggerRadius = 0.75f;
     [SerializeField] private KeyCode interactKey;
 
     private Image myImage;

@@ -50,7 +50,7 @@ public class ChestScript : MonoBehaviour
                 item = null;
             }
 
-
+            FindObjectOfType<SoundEffects>().PlayOpenChest();
         }
     }
 

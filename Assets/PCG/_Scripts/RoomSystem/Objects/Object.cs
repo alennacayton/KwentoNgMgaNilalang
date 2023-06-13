@@ -60,6 +60,7 @@ public class Object : MonoBehaviour
     {
         PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
         playerInventory.AddItemToInventory(pickupItem);
+        FindObjectOfType<SoundEffects>().PlayPickupItem();
         Destroy(this.gameObject);
     }
 }

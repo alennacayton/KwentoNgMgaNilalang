@@ -153,3 +153,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 94d74ffc91b62c74dabafdd30b1a1567, type: 3}
   - {fileID: 8300000, guid: 2eb5356dd428d064182e11e7a9425e7a, type: 3}
   - {fileID: 8300000, guid: 005806a5d016728478e85fce2452bff0, type: 3}
+  chestOpen: {fileID: 8300000, guid: 0ea667d2e3a5f4743bc179c252e81edc, type: 3}
+  pickupItem: {fileID: 8300000, guid: a068d832e91acd54397c1780c0fb11fd, type: 3}
