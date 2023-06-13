@@ -18,6 +18,8 @@ public class VillagerScript : MonoBehaviour
     private Text nameText;
     private DialogueTrigger dialogueTrigger;
 
+    private bool hasObtainedEntry;
+
     public void Start()
     {
         isInRange = false;
@@ -38,8 +40,6 @@ public class VillagerScript : MonoBehaviour
         npcText = myObjectText.GetComponent<Text>();
         continueText = objectContinueText.GetComponent<Text>();
         nameText = objectNameText.GetComponent<Text>();
-
-
     }
 
     // Update is called once per frame
@@ -110,7 +110,17 @@ public class VillagerScript : MonoBehaviour
                     default:
                         break;
                 }
-                FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+
+                if (!hasObtainedEntry)
+                {
+                    FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
+                    hasObtainedEntry = true;
+
+
+                    //FOR TESTING PURPOSES
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+                }
+                
             }
             
 
