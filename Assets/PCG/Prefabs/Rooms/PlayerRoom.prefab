@@ -46,24 +46,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2334184184601206654, guid: bfdae5ea0a2bf4f4ba045235b0f22eb0, type: 3}
   objectData:
-  - minQuantity: 2
-    maxQuantity: 4
+  - minQuantity: 1
+    maxQuantity: 2
     objectData: {fileID: 11400000, guid: f42e9114019933d4cbe2ee1cf58e5165, type: 2}
-  - minQuantity: 2
-    maxQuantity: 4
+  - minQuantity: 1
+    maxQuantity: 3
     objectData: {fileID: 11400000, guid: d33f6fea7db47904a997959b7bdf3e4c, type: 2}
-  - minQuantity: 4
-    maxQuantity: 5
-    objectData: {fileID: 11400000, guid: a86781740217fdd478a31e4e6e5cba42, type: 2}
   - minQuantity: 2
-    maxQuantity: 4
+    maxQuantity: 3
+    objectData: {fileID: 11400000, guid: a86781740217fdd478a31e4e6e5cba42, type: 2}
+  - minQuantity: 1
+    maxQuantity: 2
     objectData: {fileID: 11400000, guid: 70bb79b25760ec54d8a3c2f4d30fbde2, type: 2}
   - minQuantity: 2
-    maxQuantity: 4
+    maxQuantity: 2
     objectData: {fileID: 11400000, guid: fcf87a5e0042a59469f120de940f4d83, type: 2}
-  - minQuantity: 2
-    maxQuantity: 4
+  - minQuantity: 1
+    maxQuantity: 2
     objectData: {fileID: 11400000, guid: ff1b0ca5b1c362d44b72b6ded99ddcae, type: 2}
+  - minQuantity: 3
+    maxQuantity: 5
+    objectData: {fileID: 11400000, guid: 3ec8c312e525998498bffb23d19f9154, type: 2}
   prefabPlacementData:
   - minQuantity: 1
     maxQuantity: 1

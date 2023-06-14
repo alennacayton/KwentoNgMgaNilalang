@@ -50,4 +50,10 @@ MonoBehaviour:
     maxQuantity: 1
     objectPrefab: {fileID: 5317759323629701040, guid: 481eeba7fc62e8d418ef7a35f5795bcd, type: 3}
     objectSize: {x: 1, y: 1}
-  itemData: []
+  itemData:
+  - minQuantity: 2
+    maxQuantity: 4
+    objectData: {fileID: 11400000, guid: fcf87a5e0042a59469f120de940f4d83, type: 2}
+  - minQuantity: 4
+    maxQuantity: 7
+    objectData: {fileID: 11400000, guid: 3ec8c312e525998498bffb23d19f9154, type: 2}

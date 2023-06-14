@@ -1795,8 +1795,7 @@ MonoBehaviour:
       - Welcome traveler! I hope you're well prepared. You'll be exploring various
         areas and capturing creatures to advance to the next levels. Let's get started
         by familiarizing ourselves with the controls and objectives!
-      - 'You can control your character using either the W, A, S, and D keys on your
-        keyboard or the arrow keys. '
+      - 'You can control your character using the W, A, S, and D keys on your keyboard. '
       - To interact with items such as talking to NPCs or picking up objects, simply
         press the E key on your keyboard. This will allow you to interact with various
         elements in the game world.

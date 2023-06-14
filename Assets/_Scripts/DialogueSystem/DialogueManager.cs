@@ -14,19 +14,12 @@ public class DialogueManager : MonoBehaviour
     public AudioClip typingSoundClip;
 
 
-
-
     private Queue<string> currentSentenceQueue;
 
 
     public void StartDialogue(DialogueSet dialogueSet)
     {
-        PlayerInput[] playerInputs = FindObjectsOfType<PlayerInput>();
-        foreach (PlayerInput playerInput in playerInputs)
-        {
-            playerInput.enabled = false; // Disable the PlayerInput script to prevent player movement
-        }
-
+     
     
         npcDialogue.SetActive(true);
         nameText.text = dialogueSet.dialogue.name;
@@ -101,12 +94,5 @@ public class DialogueManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        PlayerInput[] playerInputs = FindObjectsOfType<PlayerInput>();
-        foreach (PlayerInput playerInput in playerInputs)
-        {
-            playerInput.enabled = true; // Enable the PlayerInput script to allow player movement again
-        }
-
-        
     }
 }
