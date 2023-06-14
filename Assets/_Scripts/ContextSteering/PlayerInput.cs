@@ -11,8 +11,7 @@ public class PlayerInput : MonoBehaviour
 
     public AudioSource movementSoundEffect;
 
-    public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
-    public UnityEvent OnAttack;
+    public UnityEvent<Vector2> OnMovementInput;
 
 
     //[SerializeField]
@@ -28,7 +27,6 @@ public class PlayerInput : MonoBehaviour
     {
         //OnMovementInput?.Invoke(movement.action.ReadValue<Vector2>().normalized);
         OnMovementInput?.Invoke(new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical")));
-        OnPointerInput?.Invoke(GetPointerInput());
         if(Input.GetKey(KeyCode.W) ||Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             movementSoundEffect.enabled = true;
@@ -46,14 +44,6 @@ public class PlayerInput : MonoBehaviour
 
         */
 
-    }
-
-    private Vector2 GetPointerInput()
-    {
-        //Vector3 mousePos = pointerPosition.action.ReadValue<Vector2>();
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane;
-        return Camera.main.ScreenToWorldPoint(mousePos);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

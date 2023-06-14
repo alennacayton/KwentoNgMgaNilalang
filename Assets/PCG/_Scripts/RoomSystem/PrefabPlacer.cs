@@ -23,11 +23,11 @@ public class PrefabPlacer : MonoBehaviour
             foreach (var note in sceneNote.notes)
             {
                 note.Tag = 0;
-                UnityEditor.EditorUtility.SetDirty(note);
+                //UnityEditor.EditorUtility.SetDirty(note);
             }
         }
 
-        UnityEditor.AssetDatabase.SaveAssets();
+        //UnityEditor.AssetDatabase.SaveAssets();
 
         
     }
@@ -128,8 +128,8 @@ public class PrefabPlacer : MonoBehaviour
 
                         note.Tag = 1;
 
-                        UnityEditor.EditorUtility.SetDirty(note);
-                        UnityEditor.AssetDatabase.SaveAssets();
+                        //UnityEditor.EditorUtility.SetDirty(note);
+                        //UnityEditor.AssetDatabase.SaveAssets();
                         break;
                     }
                     Debug.Log("Note: " + note);

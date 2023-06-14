@@ -13,10 +13,8 @@ GameObject:
   - component: {fileID: 2334184184601206649}
   - component: {fileID: 2334184184601206650}
   - component: {fileID: 2334184184601206652}
-  - component: {fileID: 2334184184601206648}
   - component: {fileID: 2334184184601206534}
   - component: {fileID: 3623326460163637102}
-  - component: {fileID: 2124840705820649637}
   - component: {fileID: 4496711522273779308}
   - component: {fileID: -862418280739466133}
   - component: {fileID: 6660250609731314330}
@@ -108,63 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9356072513729f94695480b9a7325b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2334184184601206648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334184184601206654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3348746951f94ee498308faae9a7cb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 2
-  maxHealth: 2
-  OnHitWithReference:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InstantiateHelper, Assembly-CSharp
-        m_MethodName: CreatePrefab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2124840705820649637}
-        m_TargetAssemblyTypeName: KnockbackFeedback, Assembly-CSharp
-        m_MethodName: PlayFeedback
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnDeathWithReference:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InstantiateHelper, Assembly-CSharp
-        m_MethodName: CreatePrefab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  isDead: 0
 --- !u!114 &2334184184601206534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,36 +135,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnPointerInput:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2334184184601206652}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
-        m_MethodName: set_PointerInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnAttack:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2334184184601206652}
-        m_TargetAssemblyTypeName: Agent, Assembly-CSharp
-        m_MethodName: PerformAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!210 &3623326460163637102
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -235,75 +146,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
---- !u!114 &2124840705820649637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2334184184601206654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a44839dc09f5e8489fab80b89bcedde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2d: {fileID: 2334184184601206651}
-  strength: 16
-  delay: 0.15
-  OnBegin:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2334184184601206650}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2334184184601206534}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnDone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2334184184601206650}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2334184184601206534}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!70 &4496711522273779308
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 3)
             music.Stop();
     }
 }
