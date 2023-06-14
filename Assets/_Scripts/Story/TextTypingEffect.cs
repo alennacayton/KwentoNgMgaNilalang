@@ -36,7 +36,7 @@ public class TextTypingEffect : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name == "CutScene")
         {
-            SceneManager.LoadScene("AreaOne");
+            SceneManager.LoadScene(2);
         }
         if (SceneManager.GetActiveScene().name == "Ending")
         {

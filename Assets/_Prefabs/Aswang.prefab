@@ -156,8 +156,8 @@ MonoBehaviour:
   - dialogue:
       name: Aswang
       sentences:
-      - 'Ah, an intruder in my domain. You dare cross paths with the Aswang, a wicked
-        shape-shifter of the night. Do you truly believe you can challenge me? '
-      - Let the darkness bear witness to your impending doom. Prepare for a clash
-        that will echo through the night!
+      - 'AH, Sino ka? You dare cross paths with the Aswang, a wicked shape-shifter
+        of the night. Do you truly believe you can challenge me? '
+      - Humanda ka! Let the darkness bear witness to your impending doom. Prepare
+        for a clash that will echo through the night!
     condition: aswangCombat

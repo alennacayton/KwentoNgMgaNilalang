@@ -156,9 +156,9 @@ MonoBehaviour:
   - dialogue:
       name: Maria Makiling
       sentences:
-      - Welcome, traveler, to the realm I hold dear. I am Maria Makiling, guardian
-        of this sacred mountain. You have ventured far, but do you possess the strength
-        to face me in battle?
+      - Welcome, traveler, Kumusta?  I am Maria Makiling, guardian of this sacred
+        mountain. You have ventured far, but do you possess the strength to face
+        me in battle?
       - Prepare yourself, for I am not just a guardian of peace and harmony, but
         a force to be reckoned with. Show me your resolve!
     condition: diwataCombat

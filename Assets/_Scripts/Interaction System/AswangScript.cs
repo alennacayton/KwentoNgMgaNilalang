@@ -66,7 +66,7 @@ public class AswangScript : MonoBehaviour
     IEnumerator DelayedExecution()
     {
         // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
 
         // Code to execute after 5 seconds
         myImage.enabled = false;

@@ -2215,6 +2215,8 @@ MonoBehaviour:
   npcDialogue: {fileID: 1355230554}
   nameText: {fileID: 973780672}
   dialogueText: {fileID: 36384690}
+  typingAudioSource: {fileID: 652430549}
+  typingSoundClip: {fileID: 8300000, guid: 7f154d6f0bd405448ac76c238fb42180, type: 3}
 --- !u!4 &652430548
 Transform:
   m_ObjectHideFlags: 0
@@ -2240,9 +2242,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7cc057bed53baf34799f52aab3c84800, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7f154d6f0bd405448ac76c238fb42180, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.28
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -29930,7 +29932,7 @@ MonoBehaviour:
   wallSideRight: {fileID: 11400000, guid: 487d426caccf65446bc184a39c429c4e, type: 2}
   wallSiderLeft: {fileID: 11400000, guid: ae8fab11f6920c447bc89848f11bdea2, type: 2}
   wallBottom: {fileID: 11400000, guid: bf54d66c0f0e40c4687d161fb94c28da, type: 2}
-  wallFull: {fileID: 11400000, guid: 83bfb67b2be64124c855431cd531dc2e, type: 2}
+  wallFull: {fileID: 11400000, guid: f3e8798663ac90543b4c3a475fefd03e, type: 2}
   wallInnerCornerDownLeft: {fileID: 11400000, guid: a95adcdd9e7ab814aa80d6ce086a827a, type: 2}
   wallInnerCornerDownRight: {fileID: 11400000, guid: a95adcdd9e7ab814aa80d6ce086a827a, type: 2}
   wallDiagonalCornerDownRight: {fileID: 11400000, guid: c7f2fa5df39725149b39e383962659aa, type: 2}

@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: d4c110ea10cf3d942ba9f9b3abb75546
   - enabled: 1
     path: Assets/Scenes/Quiz Scenes/AswangQuiz.unity
-    guid: e2dc8f273bac41c46a52453797d12d41
+    guid: 9448e5a274e0da64da39f6a63bc2ab6b
   - enabled: 1
     path: Assets/Scenes/AreaTwo.unity
     guid: d388c5b3c8a12fa4a8daf31b77624712
@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: e9d567b7d8df45d49bdaad22f428c22d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

@@ -156,9 +156,8 @@ MonoBehaviour:
   - dialogue:
       name: Bungisngis
       sentences:
-      - '* a booming laugh echoes through the trees * Well, well, what do we have
-        here? A puny mortal stumbles upon my domain. Prepare yourself for a battle,
-        weakling!'
+      - '* a booming laugh echoes through the trees * Aba, aba, ano ba meron dito?
+        A puny mortal stumbles upon my domain. Prepare yourself for a battle, weakling!'
       - Let's see if you can bring a smile to my face... before I bring an end to
         yours!
     condition: bungisngisCombat

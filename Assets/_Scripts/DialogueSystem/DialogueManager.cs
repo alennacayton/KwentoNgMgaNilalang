@@ -10,13 +10,24 @@ public class DialogueManager : MonoBehaviour
     public GameObject npcDialogue;
     public Text nameText;
     public Text dialogueText;
-  //  public AudioSource typingAudioSource;
- //   public AudioClip typingSoundClip;
+    public AudioSource typingAudioSource;
+    public AudioClip typingSoundClip;
+
+
+
 
     private Queue<string> currentSentenceQueue;
 
+
     public void StartDialogue(DialogueSet dialogueSet)
     {
+        PlayerInput[] playerInputs = FindObjectsOfType<PlayerInput>();
+        foreach (PlayerInput playerInput in playerInputs)
+        {
+            playerInput.enabled = false; // Disable the PlayerInput script to prevent player movement
+        }
+
+    
         npcDialogue.SetActive(true);
         nameText.text = dialogueSet.dialogue.name;
 
@@ -39,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
     }
     
+    /*
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
@@ -52,13 +64,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-/*
+*/
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
 
         // Calculate the delay for each character based on the length of the audio clip
-        float delay = typingSoundClip.length / sentence.Length;
+     //   float delay = typingSoundClip.length / sentence.Length;
+
+        float delay = 0.03f; // Increase this value for a slower typing speed
+
 
         foreach (char letter in sentence.ToCharArray())
         {
@@ -75,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         typingAudioSource.PlayOneShot(typingSoundClip);
     }
 
-    */
+    
     void EndDialogue()
     {
         Debug.Log("End of conversation");
@@ -85,5 +100,13 @@ public class DialogueManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
+        PlayerInput[] playerInputs = FindObjectsOfType<PlayerInput>();
+        foreach (PlayerInput playerInput in playerInputs)
+        {
+            playerInput.enabled = true; // Enable the PlayerInput script to allow player movement again
+        }
+
+        
     }
 }

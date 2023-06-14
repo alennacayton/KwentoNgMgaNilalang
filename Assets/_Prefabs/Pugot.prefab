@@ -156,9 +156,9 @@ MonoBehaviour:
   - dialogue:
       name: Pugot
       sentences:
-      - '*emerges from the shadows, body shifting and transforming* Ah, a curious
-        mortal has stumbled into my realm.You shall regret crossing paths with the
-        headless Pugot, for I am swift and cunning!'
+      - '*emerges from the shadows, body shifting and transforming* Ah, isang mausisang
+        mortal ang nakasalampak sa aking kaharian. You shall regret crossing paths
+        with the headless Pugot, for I am swift and cunning!'
       - Your bravery will be short-lived, mortal! Prepare to face the wrath of the
         headless terror!
     condition: pugotCombat
