@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7081381907105145767}
   - component: {fileID: 9088399858934688129}
   - component: {fileID: 753372310153217351}
+  - component: {fileID: 6548654937556307415}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -279,3 +280,23 @@ MonoBehaviour:
       - "So, dear traveler, be cautious of the Pugot\u2019s mischievous nature. May
         your path be guided by the glow of courage and wisdom."
     condition: pugotInfo
+--- !u!95 &6548654937556307415
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648661667295815093}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df46b6bf19d8939439f4d88735a9d237, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
