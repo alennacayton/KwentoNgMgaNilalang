@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6796136569494499425}
   - component: {fileID: 1803537901722738225}
   - component: {fileID: 7081381907105145767}
-  - component: {fileID: 9088399858934688129}
   - component: {fileID: 753372310153217351}
-  - component: {fileID: 6548654937556307415}
-  - component: {fileID: 1533684776487449734}
+  - component: {fileID: -7524336780083185191}
+  - component: {fileID: -5929963220428638263}
+  - component: {fileID: -2818322026405631360}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -104,22 +104,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &9088399858934688129
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4648661667295815093}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.73974603
 --- !u!114 &753372310153217351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +265,20 @@ MonoBehaviour:
       - "So, dear traveler, be cautious of the Pugot\u2019s mischievous nature. May
         your path be guided by the glow of courage and wisdom."
     condition: pugotInfo
---- !u!95 &6548654937556307415
+--- !u!114 &-7524336780083185191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648661667295815093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ceb0c104764748b59f504635da615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6796136569494499425}
+--- !u!95 &-5929963220428638263
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -301,16 +298,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1533684776487449734
-MonoBehaviour:
+--- !u!58 &-2818322026405631360
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4648661667295815093}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9ceb0c104764748b59f504635da615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6796136569494499425}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.69

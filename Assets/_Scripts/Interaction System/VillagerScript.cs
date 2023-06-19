@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class VillagerScript : MonoBehaviour
 {
-
     public bool isInRange;
-    // Start is called before the first frame update
-    [SerializeField] private float triggerRadius = 0.75f;
+
+    [SerializeField] private float triggerRadius = 1.5f;
     [SerializeField] private KeyCode interactKey;
 
     private Image myImage;
@@ -20,46 +19,43 @@ public class VillagerScript : MonoBehaviour
 
     private bool hasObtainedEntry;
 
-    public void Start()
+    private CircleCollider2D collider;
+
+    private void Start()
     {
         isInRange = false;
         interactKey = KeyCode.E;
-        GetComponent<CircleCollider2D>().radius = triggerRadius;
+        collider = GetComponent<CircleCollider2D>();
+        collider.radius = 0.69f;
 
         dialogueTrigger = GetComponent<DialogueTrigger>();
 
-
-        // Get a reference to the GameObject
+        // Get references to UI elements
         GameObject myObject = GameObject.Find("NpcDialogue");
         GameObject myObjectText = GameObject.Find("NpcText");
         GameObject objectContinueText = GameObject.Find("Continue");
         GameObject objectNameText = GameObject.Find("Name");
 
-        // Get a reference to the Image component on the GameObject
         myImage = myObject.GetComponent<Image>();
         npcText = myObjectText.GetComponent<Text>();
         continueText = objectContinueText.GetComponent<Text>();
         nameText = objectNameText.GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    public void Update()
+    private void Update()
     {
         if (isInRange && Input.GetKeyDown(interactKey))
         {
             PlayerInventory playerInventory = FindObjectOfType<PlayerInventory>();
             bool hasQuestItem = playerInventory.HasQuestItem();
             Debug.Log("Interacted with NPC...");
-            //   GetComponent<Image>().gameObject.SetActive(true);
 
             myImage.enabled = true;
-          //  npcText.text = "Hello there young man! I need to saut� some pork, but i'm out of garlic. Can you help me find some?";
             npcText.enabled = true;
-
             continueText.enabled = true;
             nameText.enabled = true;
 
-            if(!hasQuestItem)
+            if (!hasQuestItem)
             {
                 Debug.Log("Quest Dialogue playing....");
 
@@ -72,6 +68,7 @@ public class VillagerScript : MonoBehaviour
                     case "AreaTwo":
                         dialogueTrigger.TriggerDialogue("diwataQuest");
                         break;
+
                     case "AreaThree":
                         dialogueTrigger.TriggerDialogue("bungisngisQuest");
                         break;
@@ -82,8 +79,6 @@ public class VillagerScript : MonoBehaviour
 
                     default:
                         break;
-
-
                 }
             }
             else
@@ -99,6 +94,7 @@ public class VillagerScript : MonoBehaviour
                     case "AreaTwo":
                         dialogueTrigger.TriggerDialogue("diwataInfo");
                         break;
+
                     case "AreaThree":
                         dialogueTrigger.TriggerDialogue("bungisngisInfo");
                         break;
@@ -116,33 +112,23 @@ public class VillagerScript : MonoBehaviour
                     FindObjectOfType<AlmanacButtonManager>().almanac.GetComponent<AlmanacCanvas>().AddContentToAlmanac();
                     hasObtainedEntry = true;
 
-
                     //FOR TESTING PURPOSES
                     //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
                 }
-                
             }
-            
-
-
-
         }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Item is In Range");
         isInRange = true;
-   
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log("Item is Out of Range");
         isInRange = false;
         myImage.enabled = false;
-        npcText.enabled = false ;
-
+        npcText.enabled = false;
         continueText.enabled = false;
         nameText.enabled = false;
     }

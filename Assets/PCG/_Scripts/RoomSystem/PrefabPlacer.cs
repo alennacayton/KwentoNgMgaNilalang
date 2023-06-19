@@ -102,6 +102,7 @@ public class PrefabPlacer : MonoBehaviour
 
             // Check if prefab is a Chest
 
+         //   Debug.Log("PREFAB NAME ===================== " + prefab.name);
             if (prefab.name == "Chest")
             {
 
@@ -148,24 +149,6 @@ public class PrefabPlacer : MonoBehaviour
 
                 chestComponent.SetNoteObject(selectedNote);
 
-
-            }
-            else if(prefab.name == "NPC")
-            {
-                Debug.Log("================ NPC PREFAB ================ ");
-                // Generate the Chest prefab
-                GameObject newNPC= Instantiate(prefab, placementPosition, Quaternion.identity);
-
-
-                // Access the collider component of the instantiated object
-                CircleCollider2D collider = newNPC.GetComponent<CircleCollider2D>();
-                if (collider != null)
-                {
-                    // Set the collider radius
-                    collider.radius = 0.739746f;
-                }
-
-                Debug.Log("================ NPC PREFAB COLLIDER RADIUS  ================ " + collider.radius);
 
             }
             else

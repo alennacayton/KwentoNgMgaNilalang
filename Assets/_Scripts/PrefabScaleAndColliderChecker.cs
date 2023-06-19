@@ -18,8 +18,8 @@ public class PrefabScaleAndColliderChecker : MonoBehaviour
         prefabCollider = prefab.GetComponent<CircleCollider2D>();
         if (prefabCollider != null)
         {
-           // Debug.Log("Prefab CircleCollider2D radius in Start: " + prefabCollider.radius);
-          //  Debug.Log("Prefab CircleCollider2D size in Start: " + prefabCollider.bounds.size);
+            Debug.Log("Prefab CircleCollider2D radius in Start: " + prefabCollider.radius);
+            Debug.Log("Prefab CircleCollider2D size in Start: " + prefabCollider.bounds.size);
         }
         else
         {
@@ -35,14 +35,14 @@ public class PrefabScaleAndColliderChecker : MonoBehaviour
         // Check if the scale has changed during runtime
         if (currentScale != initialScale)
         {
-          //  Debug.Log("Prefab scale has changed during runtime. New scale: " + currentScale);
+            Debug.Log("Prefab scale has changed during runtime. New scale: " + currentScale);
         }
 
         // Get the CircleCollider2D of the prefab in Update
         if (prefabCollider != null)
         {
-          //  Debug.Log("Prefab CircleCollider2D radius in Update: " + prefabCollider.radius);
-          //  Debug.Log("Prefab CircleCollider2D size in Update: " + prefabCollider.bounds.size);
+            Debug.Log("Prefab CircleCollider2D radius in Update: " + prefabCollider.radius);
+            Debug.Log("Prefab CircleCollider2D size in Update: " + prefabCollider.bounds.size);
         }
         else
         {
