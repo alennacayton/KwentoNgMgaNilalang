@@ -25,7 +25,8 @@ public class DiwataScript : MonoBehaviour
     {
         isInRange = false;
         interactKey = KeyCode.E;
-        GetComponent<CircleCollider2D>().radius = triggerRadius;
+        CircleCollider2D collider = GetComponent<CircleCollider2D>();
+        collider.radius = 1f;
         dialogueTrigger = GetComponent<DialogueTrigger>();
 
         // Get a reference to the GameObject

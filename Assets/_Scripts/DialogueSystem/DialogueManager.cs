@@ -13,14 +13,11 @@ public class DialogueManager : MonoBehaviour
     public AudioSource typingAudioSource;
     public AudioClip typingSoundClip;
 
-
     private Queue<string> currentSentenceQueue;
-
+    private bool isTextDisplaying;
 
     public void StartDialogue(DialogueSet dialogueSet)
     {
-     
-    
         npcDialogue.SetActive(true);
         nameText.text = dialogueSet.dialogue.name;
 
@@ -33,66 +30,60 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentSentenceQueue == null || currentSentenceQueue.Count == 0)
         {
-            EndDialogue();
+            if (!isTextDisplaying) // Check if text is not currently being displayed
+            {
+                EndDialogue();
+            }
+            return;
+        }
+
+        if (isTextDisplaying)
+        {
             return;
         }
 
         string sentence = currentSentenceQueue.Dequeue();
-        // dialogueText.text = sentence;'
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-    }
-    
-    /*
-    IEnumerator TypeSentence (string sentence)
-    {
-        dialogueText.text = "";
-        
-        foreach (char letter in sentence.ToCharArray())
+
+        // Check if this is the last sentence
+        if (currentSentenceQueue.Count == 0)
         {
-            //PlayTypingSound();
-            yield return new WaitForSeconds(0.02f);
-            dialogueText.text += letter;
-            yield return null;
+            // Disable the "Continue" button or perform any other necessary actions
         }
     }
-    
-*/
+
+
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
+        isTextDisplaying = true;
 
-        // Calculate the delay for each character based on the length of the audio clip
-     //   float delay = typingSoundClip.length / sentence.Length;
-
-        float delay = 0.03f; // Increase this value for a slower typing speed
-
+        float delay = 0.03f;
 
         foreach (char letter in sentence.ToCharArray())
         {
-           
             dialogueText.text += letter;
             PlayTypingSound();
             yield return new WaitForSeconds(delay);
         }
+
+        isTextDisplaying = false;
     }
-    
 
     void PlayTypingSound()
     {
         typingAudioSource.PlayOneShot(typingSoundClip);
     }
 
-    
     void EndDialogue()
     {
         Debug.Log("End of conversation");
         npcDialogue.SetActive(false);
 
-        if(SceneManager.GetActiveScene().name == "Tutorial")
+        if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-
     }
 }
