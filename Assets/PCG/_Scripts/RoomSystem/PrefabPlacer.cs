@@ -116,6 +116,17 @@ public class PrefabPlacer : MonoBehaviour
                 // Generate the Chest prefab
                 GameObject newChest = Instantiate(prefab, placementPosition, Quaternion.identity);
 
+
+                // Access the collider component of the instantiated object
+                CircleCollider2D collider = newChest.GetComponent<CircleCollider2D>();
+                if (collider != null)
+                {
+                    // Set the collider radius
+                    collider.radius = 0.6690774f;
+                }
+
+
+
                 ChestScript chestComponent = newChest.GetComponent<ChestScript>();
 
                 NoteItem selectedNote = null;
@@ -137,6 +148,24 @@ public class PrefabPlacer : MonoBehaviour
 
                 chestComponent.SetNoteObject(selectedNote);
 
+
+            }
+            else if(prefab.name == "NPC")
+            {
+                Debug.Log("================ NPC PREFAB ================ ");
+                // Generate the Chest prefab
+                GameObject newNPC= Instantiate(prefab, placementPosition, Quaternion.identity);
+
+
+                // Access the collider component of the instantiated object
+                CircleCollider2D collider = newNPC.GetComponent<CircleCollider2D>();
+                if (collider != null)
+                {
+                    // Set the collider radius
+                    collider.radius = 0.739746f;
+                }
+
+                Debug.Log("================ NPC PREFAB COLLIDER RADIUS  ================ " + collider.radius);
 
             }
             else
