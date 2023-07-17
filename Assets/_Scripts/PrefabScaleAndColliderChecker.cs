@@ -12,18 +12,18 @@ public class PrefabScaleAndColliderChecker : MonoBehaviour
     {
         // Get the scale of the prefab in Start
         initialScale = prefab.localScale;
-        Debug.Log("Prefab scale in Start: " + initialScale);
+       // Debug.Log("Prefab scale in Start: " + initialScale);
 
         // Get the CircleCollider2D of the prefab in Start
         prefabCollider = prefab.GetComponent<CircleCollider2D>();
         if (prefabCollider != null)
         {
-            Debug.Log("Prefab CircleCollider2D radius in Start: " + prefabCollider.radius);
-            Debug.Log("Prefab CircleCollider2D size in Start: " + prefabCollider.bounds.size);
+            //Debug.Log("Prefab CircleCollider2D radius in Start: " + prefabCollider.radius);
+            //Debug.Log("Prefab CircleCollider2D size in Start: " + prefabCollider.bounds.size);
         }
         else
         {
-            Debug.Log("No CircleCollider2D found on the prefab in Start.");
+            //Debug.Log("No CircleCollider2D found on the prefab in Start.");
         }
     }
 
@@ -35,18 +35,18 @@ public class PrefabScaleAndColliderChecker : MonoBehaviour
         // Check if the scale has changed during runtime
         if (currentScale != initialScale)
         {
-            Debug.Log("Prefab scale has changed during runtime. New scale: " + currentScale);
+           // Debug.Log("Prefab scale has changed during runtime. New scale: " + currentScale);
         }
 
         // Get the CircleCollider2D of the prefab in Update
         if (prefabCollider != null)
         {
-            Debug.Log("Prefab CircleCollider2D radius in Update: " + prefabCollider.radius);
-            Debug.Log("Prefab CircleCollider2D size in Update: " + prefabCollider.bounds.size);
+           // Debug.Log("Prefab CircleCollider2D radius in Update: " + prefabCollider.radius);
+            //Debug.Log("Prefab CircleCollider2D size in Update: " + prefabCollider.bounds.size);
         }
         else
         {
-            Debug.Log("No CircleCollider2D found on the prefab in Update.");
+            //Debug.Log("No CircleCollider2D found on the prefab in Update.");
         }
     }
 }

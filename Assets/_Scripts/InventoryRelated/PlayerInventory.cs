@@ -49,4 +49,21 @@ public class PlayerInventory : MonoBehaviour
 
         return false;
     }
+
+    public int GetNoteItemCount()
+    {
+        int noteItemCount = 0;
+
+        foreach (Item item in inventoryItems)
+        {
+            if (item is NoteItem)
+            {
+                noteItemCount++;
+            }
+        }
+
+        return noteItemCount;
+
+    }
+
 }
