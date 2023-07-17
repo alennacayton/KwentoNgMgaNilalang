@@ -936,18 +936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc19ff1672eba0f44ba523fc866e4d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tracks:
-  - {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
-  - {fileID: 8300000, guid: fc5af015011ea3745b7f78ea1dd1049f, type: 3}
-  - {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
-  - {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
-  - {fileID: 8300000, guid: 06906d718be5b6a4cb2df8732bf39832, type: 3}
-  - {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
-  - {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
-  - {fileID: 8300000, guid: bef0cef2ded0f0645ad90c6e5bdd4965, type: 3}
-  - {fileID: 8300000, guid: 35967e8a4dfb1664e9b066939272c0a4, type: 3}
-  - {fileID: 8300000, guid: 1f2ad53bacc245642854dbdc8ea71a9b, type: 3}
-  Audio: {fileID: 418700211}
 --- !u!82 &418700211
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1190,7 +1178,7 @@ MonoBehaviour:
     answers:
     - Snakes
     - Insects
-    - Both
+    - You like both.
     - Neither
     correctAnswer: 3
   - question: Which animals can I morph into?
@@ -1198,7 +1186,7 @@ MonoBehaviour:
     - Dog
     - Boar
     - Huge pheasant
-    - All of the above
+    - All of them
     correctAnswer: 4
   options:
   - {fileID: 1564639800}
