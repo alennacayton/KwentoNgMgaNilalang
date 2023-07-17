@@ -1034,7 +1034,7 @@ MonoBehaviour:
     - No
     - You dislike some.
     - Maybe
-    correctAnswer: 3
+    correctAnswer: 1
   options:
   - {fileID: 1564639800}
   - {fileID: 1087121104}
