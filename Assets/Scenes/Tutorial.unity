@@ -654,7 +654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -957631977, guid: ec24c1317cf878b45a836a37d122a2c5, type: 3}
+  m_Sprite: {fileID: -2135517878, guid: ec24c1317cf878b45a836a37d122a2c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1617,7 +1617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277.6, y: 194.4}
+  m_AnchoredPosition: {x: 284.3, y: 193.8}
   m_SizeDelta: {x: 120.26, y: 20.0645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818669688
@@ -1653,9 +1653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pause
-
-'
+  m_Text: Menu
 --- !u!222 &1818669689
 CanvasRenderer:
   m_ObjectHideFlags: 0
