@@ -34,7 +34,18 @@ public class TextTypingEffect : MonoBehaviour
 
         // Load the next scene after displaying all the text
 
-        if(SceneManager.GetActiveScene().name == "CutScene")
+        LoadNextScene();
+    }
+
+    public void OnSkipClick()
+    {
+        StopAllCoroutines();
+        LoadNextScene();
+    }
+
+    public void LoadNextScene()
+    {
+        if (SceneManager.GetActiveScene().name == "CutScene")
         {
             SceneManager.LoadScene(2);
         }
