@@ -25,8 +25,9 @@ public class AlmanacCanvas : MonoBehaviour
         almanacContent = FindObjectOfType<AlmanacContent>();
         currentPageNumber = 0;
 
-        SetPageContents();
-        SetButtonEnabled();
+
+        //Removes the entry already in the alamac upon retry
+        RemoveContentFromAlmanac();
     }
 
 
@@ -116,6 +117,13 @@ public class AlmanacCanvas : MonoBehaviour
     public void AddContentToAlmanac()
     {
         almanacContent.AddEntry(newEntry);
+        SetPageContents();
+        SetButtonEnabled();
+    }
+
+    public void RemoveContentFromAlmanac()
+    {
+        almanacContent.RemoveEntry(newEntry);
         SetPageContents();
         SetButtonEnabled();
     }

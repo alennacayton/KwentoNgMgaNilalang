@@ -39,6 +39,12 @@ public class QuizManager : MonoBehaviour
         }
 
         generateQuestion();
+
+
+        //For testing purposes
+        scoreCount = 1;
+        totalQuestions = 2;
+        gameOver();
     }
 
     public void gameOver()

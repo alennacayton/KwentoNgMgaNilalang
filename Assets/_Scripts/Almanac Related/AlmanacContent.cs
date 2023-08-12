@@ -24,6 +24,12 @@ public class AlmanacContent : MonoBehaviour
         almanacEntries.Add(almanacEntry);
     }
 
+    public void RemoveEntry(AlmanacEntry almanacEntry)
+    {
+        if(almanacEntries.Contains(almanacEntry))
+            almanacEntries.Remove(almanacEntry);
+    }
+
     public AlmanacEntry GetPageContent(int page)
     {
         return almanacEntries[page];
