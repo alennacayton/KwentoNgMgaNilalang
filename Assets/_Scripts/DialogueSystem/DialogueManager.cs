@@ -15,41 +15,32 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> currentSentenceQueue;
     private bool isTextDisplaying;
+    private bool isCurrentlyPlaying = false;
 
     public void StartDialogue(DialogueSet dialogueSet)
     {
+        if (isCurrentlyPlaying)
+            return;
+
         npcDialogue.SetActive(true);
         nameText.text = dialogueSet.dialogue.name;
-
+        isCurrentlyPlaying = true;
         currentSentenceQueue = new Queue<string>(dialogueSet.dialogue.sentences);
-
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if (currentSentenceQueue == null || currentSentenceQueue.Count == 0)
+
+        if(currentSentenceQueue.Count > 0)
         {
-            if (!isTextDisplaying) // Check if text is not currently being displayed
-            {
-                EndDialogue();
-            }
-            return;
+            string sentence = currentSentenceQueue.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
         }
-
-        if (isTextDisplaying)
+        else
         {
-            return;
-        }
-
-        string sentence = currentSentenceQueue.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-
-        // Check if this is the last sentence
-        if (currentSentenceQueue.Count == 0)
-        {
-            // Disable the "Continue" button or perform any other necessary actions
+            EndDialogue();
         }
     }
 
@@ -78,9 +69,10 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        StopAllCoroutines();
         Debug.Log("End of conversation");
         npcDialogue.SetActive(false);
-
+        isCurrentlyPlaying = false;
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
